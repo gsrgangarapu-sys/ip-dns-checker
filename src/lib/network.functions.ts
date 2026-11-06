@@ -8,7 +8,7 @@ const isDomain = (s: string) => /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(s);
 const isIp = (s: string) => /^[0-9a-f.:]+$/i.test(s) && (s.includes(".") || s.includes(":"));
 
 export const whoisLookup = createServerFn({ method: "POST" })
-  .inputValidator((input: { query: string }) => {
+  .validator((input: { query: string }) => {
     const q = input.query?.trim();
     if (!q || q.length > 253) throw new Error("Invalid query");
     if (!isDomain(q) && !isIp(q)) throw new Error("Enter a valid domain or IP");
@@ -32,7 +32,7 @@ export const requestHeaders = createServerFn({ method: "GET" }).handler(async ()
 });
 
 export const sslLookup = createServerFn({ method: "POST" })
-  .inputValidator((input: { domain: string }) => input)
+  .validator((input: { domain: string }) => input)
   .handler(async ({ data }) => {
     try {
       let ip = '';
@@ -102,7 +102,7 @@ export const sslLookup = createServerFn({ method: "POST" })
 
 const PORTS = [21, 22, 25, 53, 80, 110, 143, 443, 3306, 8080];
 export const portScan = createServerFn({ method: "POST" })
-  .inputValidator((input: { target: string }) => input)
+  .validator((input: { target: string }) => input)
   .handler(async ({ data }) => {
     // Due to Cloudflare/Edge restrictions, raw socket connections usually fail.
     // In a real application, you might use a microservice for port scanning.
@@ -127,7 +127,7 @@ const DNSBLS = [
 ];
 
 export const blacklistCheck = createServerFn({ method: "POST" })
-  .inputValidator((input: { target: string }) => input)
+  .validator((input: { target: string }) => input)
   .handler(async ({ data }) => {
     let ip = '';
     let targetDomain = data.target;
@@ -217,7 +217,7 @@ export const blacklistCheck = createServerFn({ method: "POST" })
   });
 
 export const emailCheck = createServerFn({ method: "POST" })
-  .inputValidator((input: { domain: string }) => input)
+  .validator((input: { domain: string }) => input)
   .handler(async ({ data }) => {
     const resolveDns = async (name: string, type: string) => {
       try {
@@ -248,7 +248,7 @@ export const emailCheck = createServerFn({ method: "POST" })
 
 // Server function for IP Geo Lookup
 export const serverIpInfo = createServerFn({ method: "POST" })
-  .inputValidator((input: { ip?: string }) => input)
+  .validator((input: { ip?: string }) => input)
   .handler(async ({ data }) => {
     try {
       let targetIp = data.ip?.trim();
