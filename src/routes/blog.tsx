@@ -19,6 +19,11 @@ export const Route = createFileRoute("/blog")({
       { property: "og:title", content: "DNS, IP & SSL Intelligence Knowledge Base | DNSChecker" },
       { property: "og:description", content: "In-depth network engineering guides, cybersecurity tutorials, and lookup diagnostics." },
       { property: "og:url", content: "https://dnschecker.space/blog" },
+      { property: "og:image", content: "https://dnschecker.space/og-home.svg" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Network & DNS Knowledge Base | DNSChecker" },
+      { name: "twitter:description", content: "In-depth tutorials: DNS propagation, SSL checks, email verification, port scanning, IP geolocation, and security headers." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" }
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/blog" }],
@@ -637,6 +642,411 @@ export function BlogPage() {
           </div>
         </div>
       )
+    },
+    {
+      id: "dns-propagation-checker",
+      title: "DNS Propagation Checker: How to Track Global DNS Updates in Real Time",
+      subtitle: "Monitor how DNS changes propagate across 100+ global nameservers and troubleshoot slow propagation.",
+      category: "DNS & Domain",
+      readTime: "6 min read",
+      date: "November 2026",
+      author: "DNSChecker Network Engineering Team",
+      tags: ["dns propagation checker", "dns propagation check", "global dns check", "dns update tracker", "cloudflare dns checker", "dns checker wifi", "dns checker ip", "dns checker speed"],
+      toolLink: "/dns",
+      toolName: "Run Global DNS Propagation Check",
+      excerpt: "Understand why DNS changes take time to propagate worldwide and how to monitor propagation status across every major ISP and region.",
+      content: (
+        <div className="space-y-6 text-slate-700 leading-relaxed">
+          <p>
+            After changing your domain's nameservers, A records, or MX records, those updates don't take effect instantly across the globe. <strong>DNS propagation</strong> is the time it takes for DNS changes to be reflected across all DNS servers worldwide â€” typically between 15 minutes and 48 hours.
+          </p>
+
+          <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200">
+            <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <Globe className="h-5 w-5 text-emerald-600" />
+              <span>Why DNS Propagation Isn't Instant</span>
+            </h4>
+            <p className="text-sm">Every DNS resolver worldwide caches records based on their <strong>TTL (Time To Live)</strong> value. When you update a record, cached copies across thousands of ISP resolvers, public DNS servers (Google 8.8.8.8, Cloudflare 1.1.1.1), and enterprise caches must expire before they fetch the updated record from your authoritative nameserver.</p>
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">Factors That Affect DNS Propagation Speed</h3>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>TTL Value:</strong> A record with TTL 300 (5 minutes) propagates much faster than one with TTL 86400 (24 hours). Before making DNS changes, lower your TTL to 300 seconds at least 24 hours in advance.</li>
+            <li><strong>ISP Caching Behavior:</strong> Some ISPs ignore low TTL values and cache DNS records for longer periods (up to 48 hours), especially in developing regions.</li>
+            <li><strong>Registrar Processing:</strong> When changing nameservers at your registrar (GoDaddy, Namecheap, Cloudflare), the registrar must update the TLD registry (.com, .space, .org), which adds 15â€“60 minutes.</li>
+            <li><strong>Anycast Networks:</strong> CDNs like Cloudflare use Anycast DNS with 300+ PoPs, which speeds up propagation but can show inconsistent results during the transition window.</li>
+          </ul>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">How to Use DNSChecker's Propagation Tool</h3>
+          <ol className="list-decimal pl-5 space-y-2">
+            <li>Enter your domain name (e.g., <code>example.com</code>) in the DNS Lookup tool above.</li>
+            <li>Select the record type you changed (A, AAAA, MX, CNAME, TXT, NS).</li>
+            <li>The tool queries authoritative nameservers in real time and shows you the current resolved value.</li>
+            <li>Compare the result with your expected value to confirm propagation is complete.</li>
+          </ol>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">Cloudflare DNS Propagation</h3>
+          <p>
+            If you use <strong>Cloudflare</strong> as your DNS provider, propagation is typically much faster (under 5 minutes) because Cloudflare's global Anycast network updates all 300+ edge locations simultaneously. However, if you're migrating <em>to</em> Cloudflare from another provider, the nameserver change at the registrar level still takes 15 minutes to 24 hours.
+          </p>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">Troubleshooting Slow Propagation</h3>
+          <div className="space-y-3">
+            <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200">
+              <span className="font-bold text-amber-800 block mb-1">Flush Your Local DNS Cache</span>
+              <p className="text-sm text-amber-900">Windows: <code>ipconfig /flushdns</code> Â· macOS: <code>sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder</code> Â· Linux: <code>sudo systemd-resolve --flush-caches</code></p>
+            </div>
+            <div className="p-4 rounded-2xl bg-blue-50 border border-blue-200">
+              <span className="font-bold text-blue-800 block mb-1">Switch to Public DNS Temporarily</span>
+              <p className="text-sm text-blue-900">Set your computer's DNS to <code>8.8.8.8</code> (Google) or <code>1.1.1.1</code> (Cloudflare) to bypass ISP caching and see updated records sooner.</p>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      id: "ip-geolocation-guide",
+      title: "IP Geolocation: How to Find the Physical Location of Any IP Address",
+      subtitle: "Complete guide to IP-to-location mapping, accuracy limitations, and GEO checker tools.",
+      category: "Website & Hosting",
+      readTime: "5 min read",
+      date: "November 2026",
+      author: "DNSChecker Security Team",
+      tags: ["geo checker", "ip geolocation", "ip location finder", "geo checker website", "geo checker free", "geo analysis tool", "ip checker location", "google ip checker"],
+      toolLink: "/geo",
+      toolName: "Run IP Geolocation Lookup",
+      excerpt: "Learn how IP geolocation databases map IP addresses to physical locations, their accuracy ranges, and how to use GEO checker tools effectively.",
+      content: (
+        <div className="space-y-6 text-slate-700 leading-relaxed">
+          <p>
+            <strong>IP Geolocation</strong> is the process of mapping an IP address to its approximate physical location â€” including country, region, city, postal code, latitude, and longitude. Every device connected to the internet is assigned an IP address by its ISP, and geolocation databases correlate these IP ranges with geographic data.
+          </p>
+
+          <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200">
+            <h4 className="font-bold text-slate-900 mb-3">How IP Geolocation Accuracy Varies</h4>
+            <div className="grid sm:grid-cols-3 gap-3 text-xs font-mono">
+              <div className="p-3 rounded-xl bg-white border border-slate-200 text-center">
+                <span className="font-bold text-emerald-700 block text-lg">99.8%</span>
+                Country-level accuracy
+              </div>
+              <div className="p-3 rounded-xl bg-white border border-slate-200 text-center">
+                <span className="font-bold text-amber-600 block text-lg">85-90%</span>
+                City-level accuracy
+              </div>
+              <div className="p-3 rounded-xl bg-white border border-slate-200 text-center">
+                <span className="font-bold text-rose-600 block text-lg">50-75%</span>
+                Postal code accuracy
+              </div>
+            </div>
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">What Data Does IP Geolocation Return?</h3>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Country & Region:</strong> The nation and state/province where the IP is registered.</li>
+            <li><strong>City:</strong> Approximate city based on ISP allocation data.</li>
+            <li><strong>Latitude / Longitude:</strong> GPS-like coordinates (approximate, not exact street address).</li>
+            <li><strong>ISP & ASN:</strong> The Internet Service Provider and Autonomous System Number operating the IP block.</li>
+            <li><strong>Timezone:</strong> The timezone associated with the IP's geographic region.</li>
+            <li><strong>Proxy/VPN Detection:</strong> Whether the IP belongs to a known VPN, proxy, or Tor exit node.</li>
+          </ul>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">Common Use Cases for GEO Checking</h3>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Content Localization:</strong> Serve region-specific content, language, and currency based on visitor IP.</li>
+            <li><strong>Fraud Prevention:</strong> Flag transactions where the IP location doesn't match the billing address.</li>
+            <li><strong>Ad Targeting:</strong> Deliver geo-targeted advertising campaigns to specific regions.</li>
+            <li><strong>Security Monitoring:</strong> Detect suspicious login attempts from unexpected countries.</li>
+            <li><strong>Compliance:</strong> Enforce geographic access restrictions (GDPR, content licensing).</li>
+          </ul>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">Why IP Geolocation Isn't 100% Accurate</h3>
+          <p>
+            IP geolocation maps the <em>ISP's registered location</em> for an IP block, not the user's actual physical address. VPNs, corporate networks, mobile carriers, and satellite internet can show locations hundreds of miles from the actual user. Mobile IPs frequently show the carrier's regional hub rather than the device's city.
+          </p>
+        </div>
+      )
+    },
+    {
+      id: "ssl-checker-guide",
+      title: "SSL Checker: How to Validate Your Website's SSL/TLS Certificate",
+      subtitle: "Step-by-step guide to checking SSL certificates, diagnosing errors, and ensuring HTTPS security.",
+      category: "SSL & TLS",
+      readTime: "6 min read",
+      date: "November 2026",
+      author: "DNSChecker Security Team",
+      tags: ["ssl checker", "ssl checker india", "ssl checker digicert", "free ssl checker", "ssl checker qualys", "ssl checker namecheap", "ssl decoder", "godaddy ssl checker", "check ssl certificate"],
+      toolLink: "/ssl",
+      toolName: "Run SSL Certificate Check",
+      excerpt: "Learn how to verify SSL/TLS certificates, detect expiration issues, check certificate chains, and troubleshoot common HTTPS errors.",
+      content: (
+        <div className="space-y-6 text-slate-700 leading-relaxed">
+          <p>
+            An <strong>SSL/TLS certificate</strong> encrypts the connection between your website and its visitors, enabling HTTPS. Without a valid SSL certificate, browsers display security warnings that scare away visitors and hurt your Google search rankings. An <strong>SSL checker</strong> validates that your certificate is correctly installed, not expired, and properly chained to a trusted root CA.
+          </p>
+
+          <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200">
+            <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <Lock className="h-5 w-5 text-emerald-600" />
+              <span>What an SSL Checker Validates</span>
+            </h4>
+            <div className="grid sm:grid-cols-2 gap-3 text-xs font-mono mt-3">
+              <div className="p-3 rounded-xl bg-white border border-slate-200">
+                <span className="font-bold text-emerald-700 block">Certificate Validity</span>
+                Is the certificate currently valid and not expired or revoked?
+              </div>
+              <div className="p-3 rounded-xl bg-white border border-slate-200">
+                <span className="font-bold text-emerald-700 block">Certificate Chain</span>
+                Are all intermediate certificates properly installed?
+              </div>
+              <div className="p-3 rounded-xl bg-white border border-slate-200">
+                <span className="font-bold text-emerald-700 block">Domain Match</span>
+                Does the certificate's CN/SAN match the domain name?
+              </div>
+              <div className="p-3 rounded-xl bg-white border border-slate-200">
+                <span className="font-bold text-emerald-700 block">TLS Version</span>
+                Is the server using TLS 1.2 or 1.3 (not deprecated SSL 3.0)?
+              </div>
+            </div>
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">Common SSL Certificate Errors</h3>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>NET::ERR_CERT_DATE_INVALID:</strong> The certificate has expired. Renew it immediately through your CA (Let's Encrypt, DigiCert, Comodo) or hosting provider.</li>
+            <li><strong>ERR_CERT_COMMON_NAME_INVALID:</strong> The domain in the URL doesn't match the certificate's Common Name or Subject Alternative Names. Ensure your cert covers both <code>example.com</code> and <code>www.example.com</code>.</li>
+            <li><strong>ERR_CERT_AUTHORITY_INVALID:</strong> The certificate chain is incomplete â€” an intermediate certificate is missing. Install the full chain bundle from your CA.</li>
+            <li><strong>Mixed Content Warnings:</strong> Your page loads over HTTPS but includes HTTP resources (images, scripts). Use protocol-relative URLs or force all assets to HTTPS.</li>
+          </ul>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">Free vs. Paid SSL Certificates</h3>
+          <p>
+            <strong>Let's Encrypt</strong> provides free DV (Domain Validation) certificates that are trusted by all major browsers. They auto-renew every 90 days and are sufficient for most websites. Paid certificates from DigiCert, GoDaddy, or Namecheap offer OV (Organization Validation) or EV (Extended Validation), which display your organization name in the certificate details â€” useful for e-commerce and financial sites.
+          </p>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">SSL Checker for Indian Websites</h3>
+          <p>
+            Indian government and banking websites frequently use certificates from <strong>NIC (National Informatics Centre)</strong> or <strong>(n)Code Solutions</strong> root CAs. These CAs are trusted in Indian browsers but may trigger warnings in international browsers. Use our SSL Checker to verify the full certificate chain and check if the root CA is globally trusted.
+          </p>
+        </div>
+      )
+    },
+    {
+      id: "email-checker-guide",
+      title: "Email Checker: How to Verify Email Addresses and Detect Spam Traps",
+      subtitle: "Complete guide to email validation, SPF/DKIM/DMARC verification, and detecting disposable emails.",
+      category: "Email & Deliverability",
+      readTime: "5 min read",
+      date: "November 2026",
+      author: "DNSChecker Email Security Team",
+      tags: ["email checker", "free email checker", "professional email checker", "email checker spam", "free email checker online", "email checker online", "email checker reddit", "best email checker", "email-checker github"],
+      toolLink: "/email",
+      toolName: "Verify Email Address Now",
+      excerpt: "Learn how to validate email addresses, check MX records, verify SPF/DKIM/DMARC policies, and identify disposable or spam-trap email addresses.",
+      content: (
+        <div className="space-y-6 text-slate-700 leading-relaxed">
+          <p>
+            An <strong>email checker</strong> validates whether an email address is real, deliverable, and safe to send to. It checks the email syntax, verifies the domain's MX records, tests SPF/DKIM/DMARC policies, and detects disposable or spam-trap addresses â€” all without sending an actual email.
+          </p>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">What Does an Email Checker Validate?</h3>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Syntax Validation:</strong> Ensures the email follows RFC 5322 format (user@domain.tld).</li>
+            <li><strong>MX Record Check:</strong> Verifies the domain has valid mail exchange servers configured.</li>
+            <li><strong>SPF Record:</strong> Checks if the domain's SPF record authorizes specific servers to send email on its behalf.</li>
+            <li><strong>DKIM Record:</strong> Verifies DomainKeys Identified Mail is configured for email authentication.</li>
+            <li><strong>DMARC Policy:</strong> Checks the domain's DMARC policy (none, quarantine, reject) for email spoofing protection.</li>
+            <li><strong>Disposable Detection:</strong> Identifies temporary/throwaway email services (Guerrilla Mail, Temp Mail, 10MinuteMail).</li>
+          </ul>
+
+          <div className="p-6 rounded-3xl bg-rose-50 border border-rose-200">
+            <h4 className="font-bold text-rose-900 mb-2 flex items-center gap-2">
+              <AlertTriangle className="h-5 w-5 text-rose-600" />
+              <span>Why Email Verification Matters</span>
+            </h4>
+            <ul className="list-disc pl-5 space-y-1 text-sm text-rose-800">
+              <li>Sending to invalid emails increases your bounce rate, damaging your sender reputation.</li>
+              <li>High bounce rates cause Gmail, Outlook, and Yahoo to mark your domain as spam.</li>
+              <li>Spam traps are email addresses set up specifically to catch spammers â€” hitting one can get your IP blacklisted.</li>
+              <li>Professional email checkers save you from deliverability disasters before you click Send.</li>
+            </ul>
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">Free vs. Professional Email Checkers</h3>
+          <p>
+            <strong>Free email checkers</strong> (like DNSChecker) perform syntax, MX, SPF, DKIM, and DMARC checks without requiring signup. <strong>Professional email checkers</strong> (ZeroBounce, NeverBounce, Hunter.io) add bulk verification, catch-all detection, role-based email filtering, and real-time API access for SaaS integrations.
+          </p>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">How to Check Email Deliverability</h3>
+          <ol className="list-decimal pl-5 space-y-2">
+            <li>Enter the email address or domain in DNSChecker's Email Check tool.</li>
+            <li>The tool resolves MX records to find the mail server.</li>
+            <li>SPF, DKIM, and DMARC DNS records are queried and validated.</li>
+            <li>The domain is checked against disposable email provider databases.</li>
+            <li>Results show a pass/fail status for each security policy.</li>
+          </ol>
+        </div>
+      )
+    },
+    {
+      id: "website-security-checker-guide",
+      title: "Website Security Checker: How to Scan Any Site for Vulnerabilities",
+      subtitle: "Comprehensive guide to checking security headers, HTTPS configuration, and detecting fake websites.",
+      category: "Security & Blacklist",
+      readTime: "6 min read",
+      date: "November 2026",
+      author: "DNSChecker Security Team",
+      tags: ["website checker online fake or real", "website safety checker", "security scan checker online", "check site security online", "website security check online free", "website scanner online", "free security scan checker", "security checker", "is this legit website checker", "best fake website checker free"],
+      toolLink: "/headers",
+      toolName: "Run Security Headers Scan",
+      excerpt: "Learn how to check if a website is safe, scan for security vulnerabilities, verify HTTPS headers, and detect fake or scam websites.",
+      content: (
+        <div className="space-y-6 text-slate-700 leading-relaxed">
+          <p>
+            A <strong>website security checker</strong> scans any site for common vulnerabilities, misconfigurations, and security header issues. It helps you determine whether a website is legitimate, properly secured with HTTPS, and configured with modern security headers like HSTS, CSP, and X-Frame-Options.
+          </p>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">Critical Security Headers Every Website Should Have</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border border-slate-200 rounded-xl overflow-hidden">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="p-3 text-left font-bold">Header</th>
+                  <th className="p-3 text-left font-bold">Purpose</th>
+                  <th className="p-3 text-left font-bold">Risk if Missing</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                <tr>
+                  <td className="p-3 font-mono text-emerald-700 font-bold">Strict-Transport-Security</td>
+                  <td className="p-3">Forces HTTPS for all future visits</td>
+                  <td className="p-3 text-rose-600">SSL stripping attacks</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-mono text-emerald-700 font-bold">Content-Security-Policy</td>
+                  <td className="p-3">Controls which resources can load</td>
+                  <td className="p-3 text-rose-600">XSS and injection attacks</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-mono text-emerald-700 font-bold">X-Frame-Options</td>
+                  <td className="p-3">Prevents clickjacking via iframes</td>
+                  <td className="p-3 text-rose-600">Clickjacking attacks</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-mono text-emerald-700 font-bold">X-Content-Type-Options</td>
+                  <td className="p-3">Prevents MIME type sniffing</td>
+                  <td className="p-3 text-rose-600">Drive-by downloads</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-mono text-emerald-700 font-bold">Referrer-Policy</td>
+                  <td className="p-3">Controls referrer info sent to other sites</td>
+                  <td className="p-3 text-amber-600">Data leakage</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">How to Check if a Website is Fake or Legitimate</h3>
+          <ol className="list-decimal pl-5 space-y-2">
+            <li><strong>Check SSL Certificate:</strong> Use our SSL Checker to verify the site has a valid, non-expired certificate from a trusted CA. Scam sites often use self-signed or recently issued DV certificates.</li>
+            <li><strong>WHOIS Lookup:</strong> Check when the domain was registered. Fraudulent sites are typically less than 6 months old with privacy-protected WHOIS records.</li>
+            <li><strong>Security Headers Scan:</strong> Legitimate businesses invest in security headers. Sites missing HSTS and CSP are either negligent or fraudulent.</li>
+            <li><strong>Blacklist Check:</strong> Run the domain through our Blacklist tool to check if it appears on any DNSBL spam or malware lists.</li>
+            <li><strong>Check Hosting Provider:</strong> Use our Hosting Check tool. Scam sites often use cheap shared hosting in unusual locations.</li>
+          </ol>
+
+          <div className="p-6 rounded-3xl bg-emerald-50 border border-emerald-200">
+            <h4 className="font-bold text-emerald-900 mb-2 flex items-center gap-2">
+              <CheckCircle2 className="h-5 w-5 text-emerald-600" />
+              <span>Quick Safety Checklist</span>
+            </h4>
+            <div className="grid sm:grid-cols-2 gap-2 text-sm text-emerald-800">
+              <div>âœ… Valid SSL certificate (not expired)</div>
+              <div>âœ… Domain age &gt; 1 year</div>
+              <div>âœ… HSTS header present</div>
+              <div>âœ… Not on any blacklist</div>
+              <div>âœ… Real contact information</div>
+              <div>âœ… Consistent WHOIS records</div>
+            </div>
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">Google Safe Browsing vs. DNSChecker</h3>
+          <p>
+            <strong>Google Safe Browsing</strong> checks if a URL is in Google's known malware/phishing database. DNSChecker goes deeper by inspecting SSL certificates, security headers, WHOIS registration data, hosting infrastructure, and blacklist status â€” giving you a more complete security picture that Google's simple safe/unsafe check doesn't provide.
+          </p>
+        </div>
+      )
+    },
+    {
+      id: "port-checker-guide",
+      title: "Port Checker Online: How to Test Open Ports on Any Server or IP",
+      subtitle: "Complete guide to checking TCP/UDP ports, port forwarding verification, and firewall diagnostics.",
+      category: "Security & Blacklist",
+      readTime: "5 min read",
+      date: "November 2026",
+      author: "DNSChecker Sysadmin Team",
+      tags: ["port checker online", "tcp port checker", "check all open ports", "all port checker", "check open ports cmd", "port forwarding check", "udp port checker", "ping eu port check"],
+      toolLink: "/ports",
+      toolName: "Run Port Scan Now",
+      excerpt: "Learn how to check if specific ports are open on any server, verify port forwarding, and diagnose firewall issues with online port checker tools.",
+      content: (
+        <div className="space-y-6 text-slate-700 leading-relaxed">
+          <p>
+            A <strong>port checker</strong> tests whether a specific TCP or UDP port is open and accepting connections on a target IP address or domain. This is essential for verifying web server configuration, game server accessibility, port forwarding rules, and firewall policies.
+          </p>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">Most Commonly Checked Ports</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border border-slate-200 rounded-xl overflow-hidden">
+              <thead className="bg-slate-100">
+                <tr>
+                  <th className="p-3 text-left font-bold">Port</th>
+                  <th className="p-3 text-left font-bold">Service</th>
+                  <th className="p-3 text-left font-bold">Common Use</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                <tr><td className="p-3 font-bold text-emerald-600">80</td><td className="p-3">HTTP</td><td className="p-3">Standard web traffic</td></tr>
+                <tr><td className="p-3 font-bold text-emerald-600">443</td><td className="p-3">HTTPS</td><td className="p-3">Encrypted web traffic (SSL/TLS)</td></tr>
+                <tr><td className="p-3 font-bold text-emerald-600">22</td><td className="p-3">SSH</td><td className="p-3">Secure shell remote access</td></tr>
+                <tr><td className="p-3 font-bold text-emerald-600">21</td><td className="p-3">FTP</td><td className="p-3">File transfer (legacy, use SFTP)</td></tr>
+                <tr><td className="p-3 font-bold text-emerald-600">25</td><td className="p-3">SMTP</td><td className="p-3">Email sending</td></tr>
+                <tr><td className="p-3 font-bold text-emerald-600">3306</td><td className="p-3">MySQL</td><td className="p-3">Database connections</td></tr>
+                <tr><td className="p-3 font-bold text-emerald-600">3389</td><td className="p-3">RDP</td><td className="p-3">Windows Remote Desktop</td></tr>
+                <tr><td className="p-3 font-bold text-emerald-600">25565</td><td className="p-3">Minecraft</td><td className="p-3">Minecraft Java server</td></tr>
+                <tr><td className="p-3 font-bold text-emerald-600">19132</td><td className="p-3">Minecraft BE</td><td className="p-3">Minecraft Bedrock server</td></tr>
+                <tr><td className="p-3 font-bold text-emerald-600">8080</td><td className="p-3">HTTP Alt</td><td className="p-3">Development/proxy servers</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">How to Check Open Ports via CMD</h3>
+          <p>You can check ports from your command line without any online tool:</p>
+          <div className="space-y-3">
+            <div>
+              <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1">Windows PowerShell:</span>
+              <div className="p-3.5 rounded-2xl bg-slate-900 text-emerald-400 font-mono text-sm">
+                <code>Test-NetConnection -ComputerName example.com -Port 443</code>
+              </div>
+            </div>
+            <div>
+              <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1">Linux / macOS:</span>
+              <div className="p-3.5 rounded-2xl bg-slate-900 text-emerald-400 font-mono text-sm">
+                <code>nc -zv example.com 443</code>
+              </div>
+            </div>
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-900 mt-8">Port Forwarding Verification</h3>
+          <p>
+            If you've set up port forwarding on your router (for hosting a Minecraft server, web server, or security camera), use our online Port Checker to verify the port is actually reachable from the public internet. Common reasons port forwarding fails:
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Double NAT:</strong> Your ISP router and your personal router both performing NAT â€” port forward on both or enable bridge mode.</li>
+            <li><strong>CGNAT:</strong> Your ISP uses Carrier-Grade NAT, sharing one public IP among multiple customers. Contact your ISP for a dedicated public IP.</li>
+            <li><strong>Windows Firewall:</strong> The Windows Defender Firewall may be blocking inbound connections even if the router forwards correctly.</li>
+            <li><strong>ISP Port Blocking:</strong> Some ISPs block ports 80, 443, and 25 on residential connections.</li>
+          </ul>
+        </div>
+      )
     }
   ];
 
@@ -695,8 +1105,12 @@ export function BlogPage() {
       <Seo 
         title="DNS, IP & SSL Intelligence Knowledge Base | DNSChecker Guides" 
         description="Comprehensive engineering tutorials on global DNS propagation, website to IP lookups, SSL certificate validation, malicious IP detection, and email security." 
-        keywords="dns check, website ip checker, ssl check, dns propagation check, email security check, port scanner, ip checker cmd, ip checker malicious, reverse ip lookup, what is my ip"
+        keywords="dns check, dns propagation checker, ssl checker, email checker, port checker online, ip geolocation, website security checker, ip checker cmd, reverse ip lookup, blacklist checker, whois lookup, hosting check, dns checker wifi, free ssl checker"
         url="https://dnschecker.space/blog"
+        breadcrumbs={[
+          { name: "Home", url: "https://dnschecker.space/" },
+          { name: "Knowledge Base", url: "https://dnschecker.space/blog" }
+        ]}
         schema={articleJsonLd}
       />
       <SiteHeader />

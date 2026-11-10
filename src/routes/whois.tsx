@@ -15,7 +15,13 @@ export const Route = createFileRoute("/whois")({
       { name: "description", content: "Use our WHOIS domain lookup tool to trace the ownership of a domain name or IP address. Find registration details, contact info, nameservers, and expiry dates." },
       { property: "og:title", content: "WHOIS Domain Lookup & IP Search" },
       { property: "og:description", content: "Instantly look up registration data, contact details, nameservers, and more for any domain name or IP address using WHOIS." },
-      { property: "og:url", content: "/whois" },
+      { property: "og:url", content: "https://dnschecker.space/whois" },
+      { property: "og:image", content: "https://dnschecker.space/og-whois.png" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "WHOIS Domain Lookup & IP Search" },
+      { name: "twitter:description", content: "Look up registration data, nameservers, and expiry for any domain." },
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/whois" }],
   }),
@@ -77,6 +83,16 @@ function WhoisPage() {
         description="Use our WHOIS domain lookup tool to trace the ownership of a domain name or IP address. Find registration details, contact info, nameservers, and expiry dates." 
         keywords="whois, whois ip, whois domain owner, domain status checker, check domain expiry, find domain registration details, whois record, whois domain tool, check domain owner"
         url="https://dnschecker.space/whois"
+        breadcrumbs={[
+          { name: "Home", url: "https://dnschecker.space/" },
+          { name: "WHOIS Lookup", url: "https://dnschecker.space/whois" }
+        ]}
+        faqs={[
+          { question: "What is WHOIS and what information does it show?", answer: "WHOIS is a public internet protocol that queries registration databases to reveal who owns a domain name. It shows registrant info, registration date, expiration date, nameservers, registrar, and DNSSEC status." },
+          { question: "How do I find out when a domain expires?", answer: "Enter the domain in the DNSChecker WHOIS Lookup tool. The Registry Expiry Date field shows the exact expiration date." },
+          { question: "Why does WHOIS show REDACTED FOR PRIVACY?", answer: "Since GDPR and ICANN Temporary Specification, most registrars automatically redact personal information from public WHOIS records. The registrar still holds the data internally." },
+          { question: "What is the difference between WHOIS and RDAP?", answer: "RDAP (Registration Data Access Protocol) is the modern replacement for WHOIS. It uses structured JSON responses, supports authentication and access control. ICANN requires all registrars to support RDAP since 2019." }
+        ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",

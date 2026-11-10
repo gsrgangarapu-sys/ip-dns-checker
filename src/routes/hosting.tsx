@@ -15,6 +15,12 @@ export const Route = createFileRoute("/hosting")({
       { property: "og:title", content: "Website to IP Checker & Hosting Provider Lookup" },
       { property: "og:description", content: "Discover the hosting provider, server IP address, datacenter location, and ASN of any website." },
       { property: "og:url", content: "https://dnschecker.space/hosting" },
+      { property: "og:image", content: "https://dnschecker.space/og-hosting.png" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Website to IP Checker & Hosting Provider Lookup" },
+      { name: "twitter:description", content: "Find hosting provider, server IP, datacenter, and ASN of any website." },
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/hosting" }],
   }),
@@ -62,6 +68,16 @@ function HostingPage() {
         description="Free website to IP checker. Find the server IP address, web hosting company, datacenter location, and ASN of any website instantly." 
         keywords="website to ip, website ip checker, find website ip address, hosting checker, who hosts this website, website hosting lookup, server ip lookup, datacenter location"
         url="https://dnschecker.space/hosting"
+        toolName="Hosting Provider Lookup"
+        breadcrumbs={[
+          { name: "Home", url: "https://dnschecker.space/" },
+          { name: "Hosting Check", url: "https://dnschecker.space/hosting" }
+        ]}
+        faqs={[
+          { question: "How do I find what hosting a website uses?", answer: "Enter any domain in the DNSChecker Hosting Check tool. It resolves the domain to its server IP address, then queries IP databases to identify the hosting provider, datacenter location, and ASN." },
+          { question: "How do I find a website IP address?", answer: "Use the DNSChecker Hosting Check or run nslookup domain.com from a terminal. Sites using CDNs like Cloudflare will show the CDN edge IP, not the origin server IP." },
+          { question: "What is the difference between shared and dedicated hosting?", answer: "Shared hosting runs hundreds of websites on one server sharing the same IP address. Dedicated hosting gives you an entire server with your own IP. A reverse IP lookup can reveal how many sites share your server." }
+        ]}
       />
       <SiteHeader />
       

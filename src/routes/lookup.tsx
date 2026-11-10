@@ -15,7 +15,13 @@ export const Route = createFileRoute("/lookup")({
       { name: "description", content: "Lookup details about any IP address including location, ISP, hostname, proxy, and blacklist status. Instantly track the IP's city, country, latitude, and longitude." },
       { property: "og:title", content: "IP Address Lookup - Trace & Locate" },
       { property: "og:description", content: "Instantly track the IP's city, country, latitude, and longitude data." },
-      { property: "og:url", content: "/lookup" },
+      { property: "og:url", content: "https://dnschecker.space/lookup" },
+      { property: "og:image", content: "https://dnschecker.space/og-lookup.png" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "IP Address Lookup - Trace & Locate an IP" },
+      { name: "twitter:description", content: "Track any IP address to city, country, ISP, and coordinates." },
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/lookup" }],
   }),
@@ -55,6 +61,17 @@ function LookupPage() {
         description="Lookup details about any IP address including location, ISP, hostname, proxy, and blacklist status. Instantly track the IP's city, country, latitude, and longitude." 
         keywords="ip address lookup, trace ip, track ip, locate ip, check ip location, ip geolocation tracker, ip location finder, free ip lookup, reverse ip lookup, opentracker"
         url="https://dnschecker.space/lookup"
+        breadcrumbs={[
+          { name: "Home", url: "https://dnschecker.space/" },
+          { name: "IP Address Lookup", url: "https://dnschecker.space/lookup" }
+        ]}
+        toolName="IP Address Lookup"
+        faqs={[
+          { question: "How do I trace an IP address?", answer: "Enter any IPv4 or IPv6 address in the lookup field above. DNSChecker instantly resolves the IP's ISP, ASN, hostname, city, country, latitude and longitude coordinates." },
+          { question: "What is the difference between IP Lookup and IP Checker?", answer: "IP Checker shows your own public IP details, while IP Address Lookup lets you enter any external IP or domain to trace its location, ISP, hosting provider, and network information." },
+          { question: "Can I look up a domain name instead of an IP?", answer: "Yes. Enter any domain name like example.com and the tool automatically resolves its A/AAAA record to find the hosting IP, then displays full geolocation and ISP details." },
+          { question: "Is this IP lookup tool free?", answer: "Yes, DNSChecker IP Address Lookup is 100% free, requires no registration, and returns real-time results from live WHOIS and geolocation databases." }
+        ]}
       />
       <SiteHeader />
       

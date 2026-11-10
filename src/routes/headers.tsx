@@ -16,6 +16,12 @@ export const Route = createFileRoute("/headers")({
       { property: "og:title", content: "HTTP Security Headers Inspector & Cyber Audit" },
       { property: "og:description", content: "Live inspection of HTTP security headers, User-Agent, and client fingerprint data." },
       { property: "og:url", content: "https://dnschecker.space/headers" },
+      { property: "og:image", content: "https://dnschecker.space/og-headers.png" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "HTTP Security Headers Inspector & Cyber Audit" },
+      { name: "twitter:description", content: "Audit HSTS, CSP, X-Frame-Options, and security headers." },
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/headers" }],
   }),
@@ -58,6 +64,15 @@ function HeadersPage() {
         description="Inspect every HTTP header your browser sends to a server. Check User-Agent, Accept, language preferences, forwarded IP, and security indicators." 
         keywords="http headers inspector, view request headers, check http headers, my user agent, inspect headers, http request viewer, browser headers"
         url="https://dnschecker.space/headers"
+        breadcrumbs={[
+          { name: "Home", url: "https://dnschecker.space/" },
+          { name: "Security Headers", url: "https://dnschecker.space/headers" }
+        ]}
+        faqs={[
+          { question: "What are HTTP security headers?", answer: "HTTP security headers are server response headers that instruct browsers on how to handle content securely. Key headers include HSTS (forces HTTPS), CSP (prevents XSS), X-Frame-Options (prevents clickjacking), and X-Content-Type-Options (prevents MIME sniffing)." },
+          { question: "How do I add HSTS to my website?", answer: "Add the header Strict-Transport-Security: max-age=31536000; includeSubDomains; preload to your server configuration. In Nginx use add_header, in Apache use Header always set." },
+          { question: "What is Content-Security-Policy (CSP)?", answer: "CSP is an HTTP header that specifies which content sources the browser is allowed to load for your page. It prevents cross-site scripting (XSS) by blocking inline scripts and unauthorized external resources." }
+        ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",

@@ -20,6 +20,18 @@ const myIpFaqs = [
   {
     question: "What does a WebRTC leak test show?",
     answer: "A WebRTC leak occurs when your web browser exposes your real local or public IP address via STUN requests, even when you have an active VPN connection."
+  },
+  {
+    question: "Can someone hack me with my IP address?",
+    answer: "An IP address alone is not enough to hack you. However, it can be used for targeted port scanning, DDoS attacks, or geolocation. Use a firewall, keep your router firmware updated, and consider a VPN."
+  },
+  {
+    question: "How do I hide my IP address?",
+    answer: "You can hide your IP using a VPN (Virtual Private Network), the Tor browser, or a proxy server. A VPN encrypts your traffic and routes it through a remote server, replacing your real IP with the VPN server IP."
+  },
+  {
+    question: "Does my IP address change when I restart my router?",
+    answer: "It depends on your ISP. Most residential ISPs assign dynamic IPs that may change when your router reconnects. Business accounts typically get static IPs that never change."
   }
 ];
 
@@ -31,6 +43,9 @@ export const Route = createFileRoute("/my-ip")({
       { property: "og:title", content: "What Is My IP Address? - Check Your IP & Location" },
       { property: "og:description", content: "Find out what your public and local IP address is. Instantly check PC LAN IP, geolocation, ISP, and WebRTC leak status." },
       { property: "og:url", content: "https://dnschecker.space/my-ip" },
+      { property: "og:image", content: "https://dnschecker.space/og-myip.png" },
+      { property: "og:type", content: "website" },
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/my-ip" }],
   }),
@@ -58,6 +73,11 @@ function MyIpPage() {
         keywords="what is my ip address, my ip checker, check ip, public ip address, pc local ip, webrtc leak test, ip location, ip tracker, my isp, free ip scanner, reverse ip lookup"
         url="https://dnschecker.space/my-ip"
         faqs={myIpFaqs}
+        breadcrumbs={[
+          { name: "Home", url: "https://dnschecker.space/" },
+          { name: "My IP Address", url: "https://dnschecker.space/my-ip" }
+        ]}
+        toolName="IP Address Checker"
       />
       <SiteHeader />
       

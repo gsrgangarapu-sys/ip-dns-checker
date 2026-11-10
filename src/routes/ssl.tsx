@@ -16,6 +16,12 @@ export const Route = createFileRoute("/ssl")({
       { property: "og:title", content: "SSL Checker - Check SSL Certificate & Verify TLS Installation" },
       { property: "og:description", content: "Free SSL Checker tool. Verify certificate validity, intermediate CA chains, and expiration dates." },
       { property: "og:url", content: "https://dnschecker.space/ssl" },
+      { property: "og:image", content: "https://dnschecker.space/og-ssl.png" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "SSL Checker - Verify TLS Certificate & Security" },
+      { name: "twitter:description", content: "Free SSL Checker. Verify certificate validity, CA chains, and expiration." },
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/ssl" }],
   }),
@@ -71,6 +77,16 @@ function SslPage() {
         description="Use our fast SSL Checker to quickly diagnose problems with your SSL certificate installation. Verify certificate validity, issuer details, and expiration dates." 
         keywords="ssl checker, check ssl certificate, ssl decoder, free ssl checker, ssl certificate checker, ssl validation, check https security, ssl server test"
         url="https://dnschecker.space/ssl"
+        breadcrumbs={[
+          { name: "Home", url: "https://dnschecker.space/" },
+          { name: "SSL Checker", url: "https://dnschecker.space/ssl" }
+        ]}
+        faqs={[
+          { question: "How do I check if a website has a valid SSL certificate?", answer: "Enter the domain in the DNSChecker SSL Checker. It performs a TLS handshake and displays certificate details including issuer, expiration, SANs, and intermediate CA chain validity." },
+          { question: "What causes SSL certificate errors in browsers?", answer: "Common causes include expired certificates, incomplete intermediate CA chain, Subject Alternative Name mismatch, mixed content loading HTTP resources on HTTPS pages, and self-signed certificates." },
+          { question: "How do I check SSL certificate expiry from command line?", answer: "Run openssl s_client -connect domain.com:443 -servername domain.com to view the full certificate chain. Add 2>/dev/null | openssl x509 -noout -dates to see only the expiry dates." },
+          { question: "What is the difference between SSL and TLS?", answer: "SSL (Secure Sockets Layer) is the predecessor of TLS (Transport Layer Security). SSL versions are all deprecated. Modern SSL certificates actually use TLS 1.2 or TLS 1.3 protocol." }
+        ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",

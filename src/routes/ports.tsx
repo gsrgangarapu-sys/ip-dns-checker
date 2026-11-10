@@ -16,6 +16,12 @@ export const Route = createFileRoute("/ports")({
       { property: "og:title", content: "Port Scanner — Check Open Ports & Server Firewall Security" },
       { property: "og:description", content: "Free online port scanner. Probe service ports on any IP or domain." },
       { property: "og:url", content: "https://dnschecker.space/ports" },
+      { property: "og:image", content: "https://dnschecker.space/og-ports.png" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Port Scanner - Check Open Ports & Firewall Security" },
+      { name: "twitter:description", content: "Free port scanner. Probe service ports on any IP or domain." },
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/ports" }],
   }),
@@ -71,6 +77,16 @@ function PortsPage() {
         description="Scan common network ports (21, 22, 80, 443, etc.) to check network security, firewalls, and exposed infrastructure. Fast and accurate TCP port scanner." 
         keywords="port scanner, open port check, test open ports, network port scanner, tcp port check, firewall test, exposed ports, nmap alternative online"
         url="https://dnschecker.space/ports"
+        breadcrumbs={[
+          { name: "Home", url: "https://dnschecker.space/" },
+          { name: "Port Scanner", url: "https://dnschecker.space/ports" }
+        ]}
+        faqs={[
+          { question: "How do I check if a port is open on my server?", answer: "Enter your server IP or domain in the DNSChecker Port Scanner. It probes common service ports (80, 443, 22, 21, 25, 3306, 8080) and reports whether each port is open, closed, or filtered." },
+          { question: "What ports should be open on a web server?", answer: "A standard web server should have port 80 (HTTP) and port 443 (HTTPS) open. Port 22 (SSH) should be restricted to your IP or VPN. Database ports (3306 MySQL, 5432 PostgreSQL) should never be publicly accessible." },
+          { question: "What is the difference between open, closed, and filtered ports?", answer: "Open: an application is actively listening. Closed: the port is reachable but no application is listening (TCP RST). Filtered: a firewall is silently dropping packets, making the port appear unreachable." },
+          { question: "How do I check if Minecraft port 25565 is open?", answer: "Enter your Minecraft server IP in the DNSChecker Port Scanner. If port 25565 shows as filtered or closed, configure port forwarding on your router to direct TCP 25565 to your server local IP." }
+        ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",

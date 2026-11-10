@@ -20,6 +20,7 @@ import { Route as HostingRouteImport } from './routes/hosting'
 import { Route as LookupRouteImport } from './routes/lookup'
 import { Route as MyIpRouteImport } from './routes/my-ip'
 import { Route as PortsRouteImport } from './routes/ports'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SslRouteImport } from './routes/ssl'
@@ -81,6 +82,11 @@ const PortsRoute = PortsRouteImport.update({
   path: '/ports',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapRoute = SitemapRouteImport.update({
   id: '/sitemap',
   path: '/sitemap',
@@ -119,6 +125,7 @@ export interface FileRoutesByFullPath {
   '/lookup': typeof LookupRoute
   '/my-ip': typeof MyIpRoute
   '/ports': typeof PortsRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/ssl': typeof SslRoute
@@ -137,6 +144,7 @@ export interface FileRoutesByTo {
   '/lookup': typeof LookupRoute
   '/my-ip': typeof MyIpRoute
   '/ports': typeof PortsRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/ssl': typeof SslRoute
@@ -156,6 +164,7 @@ export interface FileRoutesById {
   '/lookup': typeof LookupRoute
   '/my-ip': typeof MyIpRoute
   '/ports': typeof PortsRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/ssl': typeof SslRoute
@@ -176,6 +185,7 @@ export interface FileRouteTypes {
     | '/lookup'
     | '/my-ip'
     | '/ports'
+    | '/robots.txt'
     | '/sitemap'
     | '/sitemap.xml'
     | '/ssl'
@@ -194,6 +204,7 @@ export interface FileRouteTypes {
     | '/lookup'
     | '/my-ip'
     | '/ports'
+    | '/robots.txt'
     | '/sitemap'
     | '/sitemap.xml'
     | '/ssl'
@@ -212,6 +223,7 @@ export interface FileRouteTypes {
     | '/lookup'
     | '/my-ip'
     | '/ports'
+    | '/robots.txt'
     | '/sitemap'
     | '/sitemap.xml'
     | '/ssl'
@@ -231,6 +243,7 @@ export interface RootRouteChildren {
   LookupRoute: typeof LookupRoute
   MyIpRoute: typeof MyIpRoute
   PortsRoute: typeof PortsRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapRoute: typeof SitemapRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SslRoute: typeof SslRoute
@@ -317,6 +330,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PortsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap': {
       id: '/sitemap'
       path: '/sitemap'
@@ -367,6 +387,7 @@ const rootRouteChildren: RootRouteChildren = {
   LookupRoute: LookupRoute,
   MyIpRoute: MyIpRoute,
   PortsRoute: PortsRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapRoute: SitemapRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SslRoute: SslRoute,

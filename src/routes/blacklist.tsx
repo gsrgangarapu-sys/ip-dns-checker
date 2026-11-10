@@ -16,6 +16,12 @@ export const Route = createFileRoute("/blacklist")({
       { property: "og:title", content: "IP Checker Malicious & Blacklist Check" },
       { property: "og:description", content: "Check if an IP address or domain is blacklisted or malicious. Test IP reputation against 50+ DNSBL databases." },
       { property: "og:url", content: "https://dnschecker.space/blacklist" },
+      { property: "og:image", content: "https://dnschecker.space/og-blacklist.png" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "IP Checker Malicious & Blacklist Check" },
+      { name: "twitter:description", content: "Check if an IP is blacklisted against 50+ DNSBL databases." },
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/blacklist" }],
   }),
@@ -71,6 +77,17 @@ function BlacklistPage() {
         description="Check if an IP address or domain is blacklisted or malicious. Test IP reputation against 50+ DNSBL anti-spam databases, Spamhaus, Barracuda, and threat feeds." 
         keywords="ip checker malicious, ip checker blacklist, ip reputation check, check if ip is blacklisted, spamhaus lookup, mxtoolbox blacklist, dnsbl check, rbl check, email blacklist check"
         url="https://dnschecker.space/blacklist"
+        toolName="IP Blacklist Checker"
+        breadcrumbs={[
+          { name: "Home", url: "https://dnschecker.space/" },
+          { name: "Blacklist Check", url: "https://dnschecker.space/blacklist" }
+        ]}
+        faqs={[
+          { question: "How do I check if my IP address is blacklisted?", answer: "Enter your IP address or domain in the DNSChecker Blacklist Check tool. It queries 50+ DNS-based Blackhole Lists (DNSBLs) including Spamhaus ZEN, Barracuda Central, SpamCop, and AbuseIPDB in real time." },
+          { question: "Why is my IP on a blacklist?", answer: "Common reasons include sending spam emails, SSH/RDP brute-force attacks, malware or botnet activity, hosting phishing pages, or sharing an IP with a spammer on shared hosting." },
+          { question: "How do I remove my IP from a blacklist?", answer: "Each blacklist has its own delisting process. For Spamhaus, visit their lookup page and follow removal instructions. Most lists auto-delist after 1-4 weeks if the malicious activity stops." },
+          { question: "What is a DNSBL?", answer: "A DNSBL (DNS-based Blackhole List) is a database of IP addresses published via DNS that are known sources of spam, malware, or abuse. Mail servers query these lists by reversing the IP octets and resolving an A record." }
+        ]}
       />
       <SiteHeader />
       

@@ -5,6 +5,11 @@ interface FaqItem {
   answer: string;
 }
 
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
 interface SeoProps {
   title?: string;
   description?: string;
@@ -14,6 +19,8 @@ interface SeoProps {
   url?: string;
   faqs?: FaqItem[];
   schema?: Record<string, any> | Array<Record<string, any>>;
+  breadcrumbs?: BreadcrumbItem[];
+  toolName?: string;
 }
 
 // Schema-only SEO helper.
@@ -21,13 +28,15 @@ interface SeoProps {
 // Title, meta description, canonical, Open Graph and Twitter tags are owned by
 // each route's TanStack `head()` (SSR) — do NOT emit them here as well, or the
 // page will contain duplicate/conflicting tags. This component only injects
-// JSON-LD structured data (WebApplication + FAQPage).
+// JSON-LD structured data (WebApplication + FAQPage + BreadcrumbList + SoftwareApplication).
 export function Seo({
   title = "DNSChecker — Free IP Checker & Network Intelligence Tools",
   description = "Instantly check your public IPv4/IPv6, PC local network IP, geolocation, ISP, DNS, SSL, and security reputation with our free IP checker toolkit.",
   url = "https://dnschecker.space",
   faqs,
-  schema
+  schema,
+  breadcrumbs,
+  toolName
 }: SeoProps) {
   const webAppSchema = {
     "@context": "https://schema.org",
@@ -61,9 +70,42 @@ export function Seo({
     }))
   } : null;
 
-  const schemasToRender = schema
-    ? (Array.isArray(schema) ? schema : [schema])
-    : (faqSchema ? [webAppSchema, faqSchema] : [webAppSchema]);
+  const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbs.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+  } : null;
+
+  const toolSchema = toolName ? {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": toolName,
+    "applicationCategory": "NetworkingApplication",
+    "operatingSystem": "Web",
+    "url": url,
+    "description": description,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  } : null;
+
+  let schemasToRender: Record<string, any>[];
+  if (schema) {
+    schemasToRender = Array.isArray(schema) ? [...schema] : [schema];
+  } else {
+    schemasToRender = [webAppSchema];
+  }
+  // Always add FAQ, breadcrumb, and tool schemas regardless of custom schema
+  if (faqSchema) schemasToRender.push(faqSchema);
+  if (breadcrumbSchema) schemasToRender.push(breadcrumbSchema);
+  if (toolSchema) schemasToRender.push(toolSchema);
 
   return (
     <Helmet>

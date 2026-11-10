@@ -15,6 +15,12 @@ export const Route = createFileRoute("/geo")({
       { property: "og:title", content: "IP Geolocation Lookup — Map Any IP Address to Location" },
       { property: "og:description", content: "Map any IP address or domain to country, region, city, and coordinates on an interactive map." },
       { property: "og:url", content: "https://dnschecker.space/geo" },
+      { property: "og:image", content: "https://dnschecker.space/og-geo.png" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "IP Geolocation Lookup - Map Any IP to Location" },
+      { name: "twitter:description", content: "Map any IP or domain to country, region, city, and coordinates." },
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/geo" }],
   }),
@@ -62,6 +68,16 @@ function GeoPage() {
         description="Track and map the exact geographical location of any IP or domain. Discover country, region, city, and GPS coordinates instantly." 
         keywords="ip geolocation, ip tracker, map ip address, locate ip, find ip location, track ip address, domain location, ip to country, ip to city"
         url="https://dnschecker.space/geo"
+        breadcrumbs={[
+          { name: "Home", url: "https://dnschecker.space/" },
+          { name: "Geolocation", url: "https://dnschecker.space/geo" }
+        ]}
+        faqs={[
+          { question: "How accurate is IP geolocation?", answer: "IP geolocation is typically accurate to the city level (80-90% accuracy) for broadband. Country-level accuracy exceeds 99%. Mobile and VPN connections may show the carrier gateway or VPN server location." },
+          { question: "Can I find someone exact address from their IP?", answer: "No. IP geolocation identifies approximate city, region, and ISP — never a street address. Only the ISP knows which subscriber was assigned a specific IP, and only shares that with law enforcement." },
+          { question: "Why does my IP show the wrong location?", answer: "Common reasons: your ISP routes traffic through a regional hub in a different city, you are connected to a VPN, your ISP reassigned IP blocks, or the GeoIP database has not been updated." },
+          { question: "What is an ASN (Autonomous System Number)?", answer: "An ASN is a unique number assigned to a network operator by a Regional Internet Registry. It identifies who controls a block of IP addresses and how traffic is routed between networks via BGP." }
+        ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",

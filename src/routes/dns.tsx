@@ -15,6 +15,12 @@ export const Route = createFileRoute("/dns")({
       { property: "og:title", content: "DNS Check & Global DNS Propagation Checker" },
       { property: "og:description", content: "Free global DNS check tool. Check A, AAAA, MX, NS, TXT, CNAME, SOA, and PTR reverse DNS." },
       { property: "og:url", content: "https://dnschecker.space/dns" },
+      { property: "og:image", content: "https://dnschecker.space/og-dns.png" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "DNS Check & Global DNS Propagation Checker" },
+      { name: "twitter:description", content: "Free global DNS check tool. Check A, AAAA, MX, NS, TXT, CNAME, SOA, and PTR reverse DNS." },
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/dns" }],
   }),
@@ -76,6 +82,18 @@ function DnsPage() {
         description="Free online DNS check tool. Check global DNS records including A, AAAA, MX, NS, TXT, CNAME, SOA, and PTR reverse DNS. Test DNS propagation and verify server resolution." 
         keywords="dns check, dns checker, check dns propagation, dns lookup, mx record check, txt record lookup, global dns check, reverse dns ptr"
         url="https://dnschecker.space/dns"
+        toolName="DNS Lookup Tool"
+        breadcrumbs={[
+          { name: "Home", url: "https://dnschecker.space/" },
+          { name: "DNS Lookup", url: "https://dnschecker.space/dns" }
+        ]}
+        faqs={[
+          { question: "How do I check DNS records for a domain?", answer: "Enter any domain name in the DNSChecker DNS Lookup tool and select a record type (A, AAAA, MX, NS, TXT, CNAME, SOA, or CAA). The tool queries authoritative DNS servers and displays live results including TTL values." },
+          { question: "How long does DNS propagation take?", answer: "DNS propagation typically takes 15 minutes to 48 hours depending on the TTL value set on your DNS records. Lower TTL values like 300 seconds (5 minutes) propagate faster than the default 86400 seconds (24 hours)." },
+          { question: "What is the difference between A record and CNAME?", answer: "An A record maps a domain directly to an IPv4 address. A CNAME record creates an alias pointing one domain to another domain name. You cannot use a CNAME at the zone apex (root domain)." },
+          { question: "How do I flush my DNS cache?", answer: "On Windows run ipconfig /flushdns. On macOS run sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder. On Linux run sudo systemd-resolve --flush-caches." },
+          { question: "What is a PTR reverse DNS record?", answer: "A PTR record maps an IP address back to a hostname. It is the reverse of an A record. PTR records are essential for email delivery as mail servers check that the sending IP has a valid PTR record." }
+        ]}
       />
       <SiteHeader />
       

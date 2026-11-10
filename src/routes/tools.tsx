@@ -13,6 +13,15 @@ export const Route = createFileRoute("/tools")({
     meta: [
       { title: "Network Tools — WHOIS, DNS, Ports, SSL | DNSChecker" },
       { name: "description", content: "Ten production-grade lookups in one console — IP, DNS, WHOIS, SSL, security headers, blacklist, email, ports & geolocation." },
+      { property: "og:title", content: "Network Tools — WHOIS, DNS, Ports, SSL | DNSChecker" },
+      { property: "og:description", content: "Ten production-grade lookups in one console — IP, DNS, WHOIS, SSL, security headers, blacklist, email, ports & geolocation." },
+      { property: "og:url", content: "https://dnschecker.space/tools" },
+      { property: "og:image", content: "https://dnschecker.space/og-tools.png" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Network Tools — WHOIS, DNS, Ports, SSL" },
+      { name: "twitter:description", content: "Ten production-grade lookups in one console." },
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/tools" }],
   }),
@@ -40,6 +49,15 @@ function ToolsPage() {
         description="Explore all available network intelligence and security tools. IP lookup, DNS resolver, Domain WHOIS, SSL checker, Port Scanner, and more."
         keywords="network tools directory, all ip tools, free network tools, dns tools, web security tools, domain tools list, online network utilities"
         url="https://dnschecker.space/tools"
+        breadcrumbs={[
+          { name: "Home", url: "https://dnschecker.space/" },
+          { name: "All Tools", url: "https://dnschecker.space/tools" }
+        ]}
+        faqs={[
+          { question: "What network tools are available on DNSChecker?", answer: "DNSChecker offers ten free tools: IP Checker, DNS Lookup, Domain WHOIS, Hosting Check, SSL Checker, Security Headers Scan, Blacklist Check, Email Verification, Port Scanner, and IP Geolocation." },
+          { question: "Are these network tools free to use?", answer: "Yes, all ten network tools on DNSChecker are completely free with no registration required. Results are generated in real-time from live public registries." },
+          { question: "Can I use these tools to check my own server?", answer: "Absolutely. Enter your server IP or domain into any tool to audit DNS records, SSL certificates, open ports, security headers, blacklist status, and more." }
+        ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",

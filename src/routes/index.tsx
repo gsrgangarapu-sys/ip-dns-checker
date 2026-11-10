@@ -32,6 +32,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "IP Checker & IP Address Lookup" },
       { name: "twitter:description", content: "Free IP Checker and IP Address Lookup tool. Instantly test your public IPv4/IPv6, PC local IP, geolocation, and blacklist status." },
+      { property: "og:image", content: "https://dnschecker.space/og-home.png" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/" }],
   }),
@@ -85,6 +86,9 @@ function HomePage() {
         keywords="ip checker, my ip checker, ip address lookup, what is my ip, ip location, check public ip, ip tracker, ip checker cmd, ip checker malicious, ip checker minecraft, ip checker blacklist, reverse ip lookup, dns checker"
         url="https://dnschecker.space"
         faqs={homeFaqs}
+        breadcrumbs={[
+          { name: "Home", url: "https://dnschecker.space/" }
+        ]}
       />
       <div className="absolute inset-0 z-[-1] netscope-grid opacity-[0.15]" />
       <SiteHeader />
