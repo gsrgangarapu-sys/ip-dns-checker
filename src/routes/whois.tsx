@@ -11,16 +11,16 @@ import { Globe2, Loader2, Search, ArrowRight, Database, Terminal, ShieldCheck, C
 export const Route = createFileRoute("/whois")({
   head: () => ({
     meta: [
-      { title: "WHOIS Domain Lookup & IP Search - Find Out Who Owns a Domain" },
-      { name: "description", content: "Use our WHOIS domain lookup tool to trace the ownership of a domain name or IP address. Find registration details, contact info, nameservers, and expiry dates." },
-      { property: "og:title", content: "WHOIS Domain Lookup & IP Search" },
-      { property: "og:description", content: "Instantly look up registration data, contact details, nameservers, and more for any domain name or IP address using WHOIS." },
+      { title: "WHOIS Domain Lookup & Registration Search | DNSChecker" },
+      { name: "description", content: "Free WHOIS lookup tool. Inspect domain registration date, registrar name, expiration countdown, nameservers, and ICANN status flags in real-time." },
+      { property: "og:title", content: "WHOIS Domain Lookup & Registration Search | DNSChecker" },
+      { property: "og:description", content: "Free WHOIS lookup tool. Inspect domain registration date, registrar name, expiration countdown, nameservers, and ICANN status flags in real-time." },
       { property: "og:url", content: "https://dnschecker.space/whois" },
       { property: "og:image", content: "https://dnschecker.space/og-whois.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "WHOIS Domain Lookup & IP Search" },
-      { name: "twitter:description", content: "Look up registration data, nameservers, and expiry for any domain." },
+      { name: "twitter:title", content: "WHOIS Domain Lookup & Registration Search | DNSChecker" },
+      { name: "twitter:description", content: "Free WHOIS lookup tool. Inspect domain registration date, registrar name, expiration countdown, nameservers, and ICANN status flags in real-time." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/whois" }],

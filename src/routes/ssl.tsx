@@ -11,16 +11,16 @@ import { ShieldCheck, Loader2, ArrowRight, Lock, AlertTriangle, CheckCircle2, Se
 export const Route = createFileRoute("/ssl")({
   head: () => ({
     meta: [
-      { title: "SSL Checker - Check SSL Certificate & Verify TLS Installation | DNSChecker" },
-      { name: "description", content: "Free SSL Checker and TLS verification tool. Verify certificate validity, intermediate CA chains, expiration dates, and protocol security in real time." },
-      { property: "og:title", content: "SSL Checker - Check SSL Certificate & Verify TLS Installation" },
-      { property: "og:description", content: "Free SSL Checker tool. Verify certificate validity, intermediate CA chains, and expiration dates." },
+      { title: "SSL Checker — Verify SSL/TLS Certificate Online | DNSChecker" },
+      { name: "description", content: "Free SSL checker tool. Validate TLS handshake, certificate validity, issuer CA, expiration date, and chain integrity across all major web browsers." },
+      { property: "og:title", content: "SSL Checker — Verify SSL/TLS Certificate Online | DNSChecker" },
+      { property: "og:description", content: "Free SSL checker tool. Validate TLS handshake, certificate validity, issuer CA, expiration date, and chain integrity across all major web browsers." },
       { property: "og:url", content: "https://dnschecker.space/ssl" },
       { property: "og:image", content: "https://dnschecker.space/og-ssl.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SSL Checker - Verify TLS Certificate & Security" },
-      { name: "twitter:description", content: "Free SSL Checker. Verify certificate validity, CA chains, and expiration." },
+      { name: "twitter:title", content: "SSL Checker — Verify SSL/TLS Certificate Online | DNSChecker" },
+      { name: "twitter:description", content: "Free SSL checker tool. Validate TLS handshake, certificate validity, issuer CA, expiration date, and chain integrity across all major web browsers." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/ssl" }],

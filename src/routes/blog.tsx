@@ -14,16 +14,16 @@ import { motion, AnimatePresence } from "framer-motion";
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "DNS, IP & SSL Intelligence Knowledge Base | DNSChecker Guides" },
-      { name: "description", content: "Comprehensive engineering tutorials on global DNS propagation, website to IP lookups, SSL certificate validation, malicious IP detection, and email security." },
-      { property: "og:title", content: "DNS, IP & SSL Intelligence Knowledge Base | DNSChecker" },
-      { property: "og:description", content: "In-depth network engineering guides, cybersecurity tutorials, and lookup diagnostics." },
+      { title: "DNS, IP & Network Security Knowledge Base | DNSChecker" },
+      { name: "description", content: "Comprehensive tutorials on global DNS propagation, SSL certificates, terminal CMD IP lookups, email deliverability, and perimeter firewall diagnostics." },
+      { property: "og:title", content: "DNS, IP & Network Security Knowledge Base | DNSChecker" },
+      { property: "og:description", content: "Comprehensive tutorials on global DNS propagation, SSL certificates, terminal CMD IP lookups, email deliverability, and perimeter firewall diagnostics." },
       { property: "og:url", content: "https://dnschecker.space/blog" },
       { property: "og:image", content: "https://dnschecker.space/og-home.svg" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Network & DNS Knowledge Base | DNSChecker" },
-      { name: "twitter:description", content: "In-depth tutorials: DNS propagation, SSL checks, email verification, port scanning, IP geolocation, and security headers." },
+      { name: "twitter:title", content: "DNS, IP & Network Security Knowledge Base | DNSChecker" },
+      { name: "twitter:description", content: "Comprehensive tutorials on global DNS propagation, SSL certificates, terminal CMD IP lookups, email deliverability, and perimeter firewall diagnostics." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" }
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/blog" }],

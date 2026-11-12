@@ -10,16 +10,16 @@ import { Server, Search, ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/hosting")({
   head: () => ({
     meta: [
-      { title: "Website to IP Checker & Hosting Provider Lookup | DNSChecker" },
-      { name: "description", content: "Free website to IP checker. Find the server IP address, web hosting company, datacenter location, and ASN of any website instantly." },
-      { property: "og:title", content: "Website to IP Checker & Hosting Provider Lookup" },
-      { property: "og:description", content: "Discover the hosting provider, server IP address, datacenter location, and ASN of any website." },
+      { title: "Website to IP & Hosting Provider Lookup Tool | DNSChecker" },
+      { name: "description", content: "Find the hosting provider, ASN network, datacenter location, and server IP address of any website. Free real-time web hosting inspection utility." },
+      { property: "og:title", content: "Website to IP & Hosting Provider Lookup Tool | DNSChecker" },
+      { property: "og:description", content: "Find the hosting provider, ASN network, datacenter location, and server IP address of any website. Free real-time web hosting inspection utility." },
       { property: "og:url", content: "https://dnschecker.space/hosting" },
       { property: "og:image", content: "https://dnschecker.space/og-hosting.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Website to IP Checker & Hosting Provider Lookup" },
-      { name: "twitter:description", content: "Find hosting provider, server IP, datacenter, and ASN of any website." },
+      { name: "twitter:title", content: "Website to IP & Hosting Provider Lookup Tool | DNSChecker" },
+      { name: "twitter:description", content: "Find the hosting provider, ASN network, datacenter location, and server IP address of any website. Free real-time web hosting inspection utility." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/hosting" }],

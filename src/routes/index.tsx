@@ -21,17 +21,17 @@ import { useRef } from "react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "IP Checker & IP Address Lookup - Check Your Public IP Location" },
-      { name: "description", content: "Free IP Checker and IP Address Lookup tool. Instantly test your public IPv4/IPv6, PC local network IP, geolocation, ISP, blacklist status, and WebRTC leaks." },
+      { title: "IP Checker & IP Address Lookup Tool | DNSChecker" },
+      { name: "description", content: "Free online IP Checker and IP address lookup tool. Check your public IPv4/IPv6, PC network IP, ISP, geolocation, and blacklist reputation instantly." },
       { name: "author", content: "DNSChecker Team" },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
-      { property: "og:title", content: "IP Checker & IP Address Lookup - Check Your Public IP Location" },
-      { property: "og:description", content: "Free IP Checker and IP Address Lookup tool. Instantly test your public IPv4/IPv6, PC local IP, geolocation, and blacklist status." },
+      { property: "og:title", content: "IP Checker & IP Address Lookup Tool | DNSChecker" },
+      { property: "og:description", content: "Free online IP Checker and IP address lookup tool. Check your public IPv4/IPv6, PC network IP, ISP, geolocation, and blacklist reputation instantly." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://dnschecker.space/" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "IP Checker & IP Address Lookup" },
-      { name: "twitter:description", content: "Free IP Checker and IP Address Lookup tool. Instantly test your public IPv4/IPv6, PC local IP, geolocation, and blacklist status." },
+      { name: "twitter:title", content: "IP Checker & IP Address Lookup Tool | DNSChecker" },
+      { name: "twitter:description", content: "Free online IP Checker and IP address lookup tool. Check your public IPv4/IPv6, PC network IP, ISP, geolocation, and blacklist reputation instantly." },
       { property: "og:image", content: "https://dnschecker.space/og-home.png" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/" }],

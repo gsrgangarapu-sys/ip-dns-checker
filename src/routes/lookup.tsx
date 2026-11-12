@@ -11,16 +11,16 @@ import { Search, Globe, Shield, Terminal, ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/lookup")({
   head: () => ({
     meta: [
-      { title: "IP Address Lookup - Trace, Track & Locate an IP Instantly" },
+      { title: "IP Address Lookup & Geolocation Tracker | DNSChecker" },
       { name: "description", content: "Lookup details about any IP address including location, ISP, hostname, proxy, and blacklist status. Instantly track the IP's city, country, latitude, and longitude." },
-      { property: "og:title", content: "IP Address Lookup - Trace & Locate" },
+      { property: "og:title", content: "IP Address Lookup & Geolocation Tracker | DNSChecker" },
       { property: "og:description", content: "Instantly track the IP's city, country, latitude, and longitude data." },
       { property: "og:url", content: "https://dnschecker.space/lookup" },
       { property: "og:image", content: "https://dnschecker.space/og-lookup.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "IP Address Lookup - Trace & Locate an IP" },
-      { name: "twitter:description", content: "Track any IP address to city, country, ISP, and coordinates." },
+      { name: "twitter:title", content: "IP Address Lookup & Geolocation Tracker | DNSChecker" },
+      { name: "twitter:description", content: "Trace any IPv4 or IPv6 address or domain name. Instantly view country, city, ISP, ASN, datacenter host, and interactive map coordinates for free." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/lookup" }],

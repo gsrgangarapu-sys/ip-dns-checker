@@ -11,16 +11,16 @@ import { Ban, Loader2, ArrowRight, ShieldAlert, CheckCircle2, AlertTriangle, Shi
 export const Route = createFileRoute("/blacklist")({
   head: () => ({
     meta: [
-      { title: "IP Checker Malicious & Blacklist Check - Scan IP Reputation | DNSChecker" },
-      { name: "description", content: "Check if an IP address or domain is blacklisted or malicious. Test IP reputation against 50+ DNSBL anti-spam databases, Spamhaus, Barracuda, and threat feeds." },
-      { property: "og:title", content: "IP Checker Malicious & Blacklist Check" },
-      { property: "og:description", content: "Check if an IP address or domain is blacklisted or malicious. Test IP reputation against 50+ DNSBL databases." },
+      { title: "IP Blacklist Check & Malware Threat Scanner | DNSChecker" },
+      { name: "description", content: "Test any IP address or domain against 50+ DNSBL and RBL real-time anti-spam blacklists, Spamhaus, and AbuseIPDB to detect brute-force relays." },
+      { property: "og:title", content: "IP Blacklist Check & Malware Threat Scanner | DNSChecker" },
+      { property: "og:description", content: "Test any IP address or domain against 50+ DNSBL and RBL real-time anti-spam blacklists, Spamhaus, and AbuseIPDB to detect brute-force relays." },
       { property: "og:url", content: "https://dnschecker.space/blacklist" },
       { property: "og:image", content: "https://dnschecker.space/og-blacklist.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "IP Checker Malicious & Blacklist Check" },
-      { name: "twitter:description", content: "Check if an IP is blacklisted against 50+ DNSBL databases." },
+      { name: "twitter:title", content: "IP Blacklist Check & Malware Threat Scanner | DNSChecker" },
+      { name: "twitter:description", content: "Test any IP address or domain against 50+ DNSBL and RBL real-time anti-spam blacklists, Spamhaus, and AbuseIPDB to detect brute-force relays." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/blacklist" }],

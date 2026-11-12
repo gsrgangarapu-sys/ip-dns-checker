@@ -18,8 +18,8 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/sitemap")({
   head: () => ({
     meta: [
-      { title: "HTML Sitemap - DNSChecker" },
-      { name: "description", content: "Navigate through all the tools and features available on DNSChecker." },
+      { title: "HTML Sitemap — Directory of All Network Tools | DNSChecker" },
+      { name: "description", content: "Complete directory of all free network tools, DNS propagation checkers, IP lookups, security scanners, and technical engineering guides on DNSChecker." },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/sitemap" }],
   }),

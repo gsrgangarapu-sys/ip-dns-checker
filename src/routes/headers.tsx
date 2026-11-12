@@ -11,16 +11,16 @@ import { Mail, RefreshCw, Terminal, Shield, ArrowRight, Activity, Eye } from "lu
 export const Route = createFileRoute("/headers")({
   head: () => ({
     meta: [
-      { title: "HTTP Security Headers Inspector & Cyber Audit | DNSChecker" },
-      { name: "description", content: "Inspect incoming and outgoing HTTP request headers. Audit HSTS, Content-Security-Policy (CSP), X-Frame-Options, and client fingerprint data." },
-      { property: "og:title", content: "HTTP Security Headers Inspector & Cyber Audit" },
-      { property: "og:description", content: "Live inspection of HTTP security headers, User-Agent, and client fingerprint data." },
+      { title: "HTTP Security Headers Scanner & OWASP Audit | DNSChecker" },
+      { name: "description", content: "Inspect HTTP response headers. Audit HSTS, Content-Security-Policy (CSP), X-Frame-Options, and Referrer-Policy against OWASP cybersecurity baselines." },
+      { property: "og:title", content: "HTTP Security Headers Scanner & OWASP Audit | DNSChecker" },
+      { property: "og:description", content: "Inspect HTTP response headers. Audit HSTS, Content-Security-Policy (CSP), X-Frame-Options, and Referrer-Policy against OWASP cybersecurity baselines." },
       { property: "og:url", content: "https://dnschecker.space/headers" },
       { property: "og:image", content: "https://dnschecker.space/og-headers.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "HTTP Security Headers Inspector & Cyber Audit" },
-      { name: "twitter:description", content: "Audit HSTS, CSP, X-Frame-Options, and security headers." },
+      { name: "twitter:title", content: "HTTP Security Headers Scanner & OWASP Audit | DNSChecker" },
+      { name: "twitter:description", content: "Inspect HTTP response headers. Audit HSTS, Content-Security-Policy (CSP), X-Frame-Options, and Referrer-Policy against OWASP cybersecurity baselines." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/headers" }],

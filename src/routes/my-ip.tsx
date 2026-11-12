@@ -38,10 +38,10 @@ const myIpFaqs = [
 export const Route = createFileRoute("/my-ip")({
   head: () => ({
     meta: [
-      { title: "What Is My IP Address? - Check Your IP & Location | DNSChecker" },
-      { name: "description", content: "Find out what your public and local IP address is. Instantly check PC LAN IP, geolocation, ISP, WebRTC leak status, and browser fingerprint with our free IP tracker." },
-      { property: "og:title", content: "What Is My IP Address? - Check Your IP & Location" },
-      { property: "og:description", content: "Find out what your public and local IP address is. Instantly check PC LAN IP, geolocation, ISP, and WebRTC leak status." },
+      { title: "What Is My IP Address? Check Public & Local IP | DNSChecker" },
+      { name: "description", content: "Find your public IPv4 and IPv6 address, ISP, city location, ASN, and network connection status in real-time. Free instant IP detector with zero logs." },
+      { property: "og:title", content: "What Is My IP Address? Check Public & Local IP | DNSChecker" },
+      { property: "og:description", content: "Find your public IPv4 and IPv6 address, ISP, city location, ASN, and network connection status in real-time. Free instant IP detector with zero logs." },
       { property: "og:url", content: "https://dnschecker.space/my-ip" },
       { property: "og:image", content: "https://dnschecker.space/og-myip.png" },
       { property: "og:type", content: "website" },

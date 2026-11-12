@@ -11,16 +11,16 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/tools")({
   head: () => ({
     meta: [
-      { title: "Network Tools — WHOIS, DNS, Ports, SSL | DNSChecker" },
-      { name: "description", content: "Ten production-grade lookups in one console — IP, DNS, WHOIS, SSL, security headers, blacklist, email, ports & geolocation." },
-      { property: "og:title", content: "Network Tools — WHOIS, DNS, Ports, SSL | DNSChecker" },
-      { property: "og:description", content: "Ten production-grade lookups in one console — IP, DNS, WHOIS, SSL, security headers, blacklist, email, ports & geolocation." },
+      { title: "All Network Tools — IP, DNS, WHOIS, Ports & SSL | DNSChecker" },
+      { name: "description", content: "Explore 10+ free network diagnostic and cyber-intelligence tools in one console. Real-time IP, DNS, WHOIS, SSL, blacklist, port, and security scans." },
+      { property: "og:title", content: "All Network Tools — IP, DNS, WHOIS, Ports & SSL | DNSChecker" },
+      { property: "og:description", content: "Explore 10+ free network diagnostic and cyber-intelligence tools in one console. Real-time IP, DNS, WHOIS, SSL, blacklist, port, and security scans." },
       { property: "og:url", content: "https://dnschecker.space/tools" },
       { property: "og:image", content: "https://dnschecker.space/og-tools.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Network Tools — WHOIS, DNS, Ports, SSL" },
-      { name: "twitter:description", content: "Ten production-grade lookups in one console." },
+      { name: "twitter:title", content: "All Network Tools — IP, DNS, WHOIS, Ports & SSL | DNSChecker" },
+      { name: "twitter:description", content: "Explore 10+ free network diagnostic and cyber-intelligence tools in one console. Real-time IP, DNS, WHOIS, SSL, blacklist, port, and security scans." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://dnschecker.space/tools" }],
