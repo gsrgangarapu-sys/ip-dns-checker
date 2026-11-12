@@ -6,23 +6,22 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
-
         const entries = [
-          { path: "/", priority: "1.0", changefreq: "daily", lastmod: "2026-11-10" },
-          { path: "/my-ip", priority: "0.9", changefreq: "daily", lastmod: "2026-11-09" },
-          { path: "/lookup", priority: "0.9", changefreq: "weekly", lastmod: "2026-11-09" },
-          { path: "/tools", priority: "0.8", changefreq: "weekly", lastmod: "2026-11-09" },
-          { path: "/blog", priority: "0.9", changefreq: "daily", lastmod: "2026-11-10" },
-          { path: "/dns", priority: "0.8", changefreq: "weekly", lastmod: "2026-11-09" },
-          { path: "/whois", priority: "0.8", changefreq: "weekly", lastmod: "2026-11-09" },
-          { path: "/ssl", priority: "0.8", changefreq: "weekly", lastmod: "2026-11-09" },
-          { path: "/blacklist", priority: "0.8", changefreq: "weekly", lastmod: "2026-11-09" },
-          { path: "/email", priority: "0.8", changefreq: "weekly", lastmod: "2026-11-09" },
-          { path: "/geo", priority: "0.8", changefreq: "weekly", lastmod: "2026-11-09" },
-          { path: "/headers", priority: "0.8", changefreq: "weekly", lastmod: "2026-11-09" },
-          { path: "/hosting", priority: "0.8", changefreq: "weekly", lastmod: "2026-11-09" },
-          { path: "/ports", priority: "0.8", changefreq: "weekly", lastmod: "2026-11-09" },
-          { path: "/sitemap", priority: "0.7", changefreq: "weekly", lastmod: "2026-11-09" },
+          { path: "/", priority: "1.0", changefreq: "daily", lastmod: "2026-11-12" },
+          { path: "/my-ip", priority: "0.9", changefreq: "daily", lastmod: "2026-11-12" },
+          { path: "/lookup", priority: "0.9", changefreq: "weekly", lastmod: "2026-11-12" },
+          { path: "/dns", priority: "0.9", changefreq: "weekly", lastmod: "2026-11-12" },
+          { path: "/whois", priority: "0.9", changefreq: "weekly", lastmod: "2026-11-12" },
+          { path: "/ssl", priority: "0.9", changefreq: "weekly", lastmod: "2026-11-12" },
+          { path: "/blacklist", priority: "0.9", changefreq: "weekly", lastmod: "2026-11-12" },
+          { path: "/email", priority: "0.9", changefreq: "weekly", lastmod: "2026-11-12" },
+          { path: "/geo", priority: "0.9", changefreq: "weekly", lastmod: "2026-11-12" },
+          { path: "/headers", priority: "0.9", changefreq: "weekly", lastmod: "2026-11-12" },
+          { path: "/hosting", priority: "0.9", changefreq: "weekly", lastmod: "2026-11-12" },
+          { path: "/ports", priority: "0.9", changefreq: "weekly", lastmod: "2026-11-12" },
+          { path: "/tools", priority: "0.8", changefreq: "weekly", lastmod: "2026-11-12" },
+          { path: "/blog", priority: "0.9", changefreq: "daily", lastmod: "2026-11-12" },
+          { path: "/sitemap", priority: "0.7", changefreq: "weekly", lastmod: "2026-11-12" },
         ];
 
         const urls = entries.map(e =>

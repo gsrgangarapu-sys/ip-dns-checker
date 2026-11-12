@@ -14,7 +14,6 @@ interface SeoProps {
   title?: string;
   description?: string;
   // Kept for backwards compatibility with existing route files.
-  // The keywords meta tag is not emitted: Google ignores it.
   keywords?: string;
   url?: string;
   faqs?: FaqItem[];
@@ -28,7 +27,7 @@ interface SeoProps {
 // Title, meta description, canonical, Open Graph and Twitter tags are owned by
 // each route's TanStack `head()` (SSR) — do NOT emit them here as well, or the
 // page will contain duplicate/conflicting tags. This component only injects
-// JSON-LD structured data (WebApplication + FAQPage + BreadcrumbList + SoftwareApplication).
+// JSON-LD structured data (WebSite + Organization + WebApplication + FAQPage + BreadcrumbList + SoftwareApplication).
 export function Seo({
   title = "DNSChecker — Free IP Checker & Network Intelligence Tools",
   description = "Instantly check your public IPv4/IPv6, PC local network IP, geolocation, ISP, DNS, SSL, and security reputation with our free IP checker toolkit.",
@@ -38,10 +37,48 @@ export function Seo({
   breadcrumbs,
   toolName
 }: SeoProps) {
+  // Global Website Schema with Google Sitelinks SearchBox
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://dnschecker.space/#website",
+    "name": "DNSChecker",
+    "alternateName": ["DNS Checker", "IP Checker", "DNSChecker Space", "DNS Checker Online"],
+    "url": "https://dnschecker.space/",
+    "description": "Free network intelligence, DNS lookup, IP geolocation, SSL validation, and threat detection toolkit.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://dnschecker.space/lookup?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  // Publisher / Organization Schema for Knowledge Graph & E-E-A-T
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://dnschecker.space/#organization",
+    "name": "DNSChecker",
+    "url": "https://dnschecker.space/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dnschecker.space/favicon.svg",
+      "width": "512",
+      "height": "512"
+    },
+    "sameAs": [
+      "https://github.com/gsrgangarapu-sys/ip-dns-checker"
+    ],
+    "description": "Provider of real-time public network telemetry, DNS propagation checking, and cyber intelligence tools."
+  };
+
   const webAppSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "DNSChecker",
+    "name": toolName || "DNSChecker",
     "alternateName": ["DNS Checker", "IP Checker Tool", "DNSChecker Space"],
     "headline": title,
     "description": description,
@@ -53,8 +90,6 @@ export function Seo({
       "price": "0",
       "priceCurrency": "USD"
     }
-    // No AggregateRating: ratings must come from real, verifiable user
-    // reviews. A fabricated rating violates Google's structured data policy.
   };
 
   const faqSchema = faqs && faqs.length > 0 ? {
@@ -85,7 +120,7 @@ export function Seo({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": toolName,
-    "applicationCategory": "NetworkingApplication",
+    "applicationCategory": "SecurityApplication",
     "operatingSystem": "Web",
     "url": url,
     "description": description,
@@ -96,13 +131,14 @@ export function Seo({
     }
   } : null;
 
-  let schemasToRender: Record<string, any>[];
+  let schemasToRender: Record<string, any>[] = [webSiteSchema, organizationSchema];
   if (schema) {
-    schemasToRender = Array.isArray(schema) ? [...schema] : [schema];
+    const custom = Array.isArray(schema) ? schema : [schema];
+    schemasToRender.push(...custom);
   } else {
-    schemasToRender = [webAppSchema];
+    schemasToRender.push(webAppSchema);
   }
-  // Always add FAQ, breadcrumb, and tool schemas regardless of custom schema
+  // Always add FAQ, breadcrumb, and tool schemas
   if (faqSchema) schemasToRender.push(faqSchema);
   if (breadcrumbSchema) schemasToRender.push(breadcrumbSchema);
   if (toolSchema) schemasToRender.push(toolSchema);

@@ -1,0 +1,138 @@
+# DNSChecker.space — Complete Technical Reference & AI Agent Documentation
+
+## About DNSChecker
+DNSChecker (https://dnschecker.space) is an enterprise-grade cyber-intelligence and network diagnostic web application. It provides real-time lookups across domain names, IP addresses, email servers, and TLS endpoints.
+
+## Tool Directory & Use Cases
+
+### 1. My IP Address Checker (`/my-ip`)
+- **URL:** https://dnschecker.space/my-ip
+- **Target Keywords:** what is my ip, my ip address, check my ip, my ip location, public ip checker, ip lookup
+- **Capabilities:**
+  - Detects client public IPv4 and IPv6 addresses.
+  - Resolves ISP (Internet Service Provider) and Autonomous System Number (ASN).
+  - Displays approximate city, region, country, and timezone.
+  - Provides instant copy button for terminal scripting.
+
+### 2. IP Address Lookup (`/lookup`)
+- **URL:** https://dnschecker.space/lookup
+- **Target Keywords:** ip address lookup, trace ip, track ip location, whois ip, reverse ip
+- **Capabilities:**
+  - Queries arbitrary IPv4 or IPv6 addresses or domain hostnames.
+  - Maps location coordinates on an interactive Leaflet map.
+  - Detects proxy, VPN, Tor exit node, and cloud hosting datacenter IP ranges.
+
+### 3. DNS Lookup & Propagation (`/dns`)
+- **URL:** https://dnschecker.space/dns
+- **Target Keywords:** dns checker, dns lookup, dns propagation checker, check a record, mx lookup, txt record check
+- **Supported Records:**
+  - `A`: IPv4 host address.
+  - `AAAA`: IPv6 host address.
+  - `CNAME`: Canonical alias domain.
+  - `MX`: Mail exchange server priority.
+  - `NS`: Authoritative nameservers.
+  - `TXT`: Text metadata (SPF, domain ownership verification, DKIM).
+  - `SOA`: Start of Authority record.
+  - `CAA`: Certificate Authority Authorization policy.
+
+### 4. WHOIS Domain Lookup (`/whois`)
+- **URL:** https://dnschecker.space/whois
+- **Target Keywords:** whois lookup, domain whois, domain age checker, domain expiry date, registrar lookup
+- **Data Provided:**
+  - Registrar name and IANA ID.
+  - Creation date, update date, and expiration timestamp.
+  - Domain status codes (clientTransferProhibited, serverDeleteProhibited, etc.).
+  - DNSSEC validation status.
+
+### 5. SSL/TLS Certificate Checker (`/ssl`)
+- **URL:** https://dnschecker.space/ssl
+- **Target Keywords:** ssl checker, check ssl certificate, tls certificate checker, ssl expiry check, https test
+- **Diagnostics:**
+  - TLS protocol version negotiation (TLS 1.2, TLS 1.3).
+  - Subject Common Name (CN) and Subject Alternative Names (SANs).
+  - Full certificate chain trust path to root CA.
+  - Days remaining until expiration.
+
+### 6. Security Headers Scanner (`/headers`)
+- **URL:** https://dnschecker.space/headers
+- **Target Keywords:** security headers check, hsts checker, csp scanner, http headers inspection
+- **Evaluated Headers:**
+  - `Strict-Transport-Security` (HSTS)
+  - `Content-Security-Policy` (CSP)
+  - `X-Frame-Options` (Clickjacking prevention)
+  - `X-Content-Type-Options` (MIME-sniffing prevention)
+  - `Referrer-Policy` (Data leakage mitigation)
+  - `Permissions-Policy` (Browser feature restriction)
+
+### 7. Blacklist & Threat Reputation (`/blacklist`)
+- **URL:** https://dnschecker.space/blacklist
+- **Target Keywords:** ip blacklist check, spam blacklist check, rbl check, dnsbl lookup, abuseipdb check
+- **Database Coverage:**
+  - Queries 50+ real-time DNSBL / RBL spam databases.
+  - Flags IPs associated with brute-force SSH attacks, spam relays, and malware C2 servers.
+
+### 8. Email Security & SPF/DKIM/DMARC (`/email`)
+- **URL:** https://dnschecker.space/email
+- **Target Keywords:** email checker, spf checker, dkim checker, dmarc lookup, disposable email test
+- **Verification:**
+  - RFC 5322 syntax validation.
+  - MX server connectivity.
+  - SPF record syntax (`v=spf1 ...`).
+  - DMARC policy enforcement (`p=reject`, `p=quarantine`, `p=none`).
+  - Disposable temporary inbox detection.
+
+### 9. Port Scanner (`/ports`)
+- **URL:** https://dnschecker.space/ports
+- **Target Keywords:** port checker, open port scanner, test open ports, port 80 check, port 443 check, minecraft port check
+- **Probed Ports:**
+  - Port 80 (HTTP)
+  - Port 443 (HTTPS)
+  - Port 22 (SSH)
+  - Port 21 (FTP)
+  - Port 25 (SMTP)
+  - Port 3306 (MySQL)
+  - Port 3389 (RDP)
+  - Port 25565 (Minecraft Java)
+
+### 10. IP Geolocation (`/geo`)
+- **URL:** https://dnschecker.space/geo
+- **Target Keywords:** ip geolocation, geo ip lookup, find ip country, city from ip
+- **Output:** Accurate country, state/province, city, postal code, latitude, and longitude.
+
+### 11. Hosting Provider Lookup (`/hosting`)
+- **URL:** https://dnschecker.space/hosting
+- **Target Keywords:** hosting checker, who is hosting this website, server host lookup, asn lookup
+- **Output:** Hosting company, ASN number, organization name, and datacenter location.
+
+## API & Terminal Query Examples
+
+### Check Public IP via CMD / Terminal
+```bash
+# Public IPv4 lookup
+curl -4 https://dnschecker.space/my-ip
+
+# Local LAN IP (Windows CMD)
+ipconfig
+
+# Local LAN IP (Linux/macOS)
+ip a || ifconfig
+```
+
+### Flush DNS Resolver Cache
+```bash
+# Windows (CMD / PowerShell)
+ipconfig /flushdns
+
+# macOS
+sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+
+# Linux (systemd-resolved)
+sudo systemd-resolve --flush-caches
+```
+
+## Schema & Structured Data Architecture
+- Every page emits Schema.org `WebApplication` or `SoftwareApplication`.
+- Every page emits Schema.org `BreadcrumbList`.
+- All tool and homepage views emit Schema.org `FAQPage` rich snippet data.
+- Global `WebSite` schema specifies search capability.
+- Global `Organization` schema provides publisher verification and brand authority.

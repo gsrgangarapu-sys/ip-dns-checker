@@ -1,0 +1,34 @@
+# DNSChecker — Network Intelligence & Security Tools
+
+> DNSChecker (https://dnschecker.space) is a free, real-time network intelligence, DNS resolution, IP geolocation, and cyber-reputation platform built for developers, DevOps engineers, sysadmins, and cybersecurity analysts.
+
+## Core Tools
+
+- [My IP Address Checker](https://dnschecker.space/my-ip): Detect your device's public IPv4/IPv6 address, ISP, ASN, reverse DNS, and connection metadata.
+- [IP Address Lookup](https://dnschecker.space/lookup): Inspect any target IP or domain for physical coordinates, autonomous system, hosting datacenter, and proxy/VPN flags.
+- [DNS Propagation & Record Lookup](https://dnschecker.space/dns): Query authoritative DNS records (A, AAAA, MX, NS, TXT, CNAME, SOA, CAA) with real-time TTL evaluation.
+- [WHOIS Domain Lookup](https://dnschecker.space/whois): Inspect domain registrar, registration date, expiry countdown, domain status codes (EPP), and nameserver delegation.
+- [SSL/TLS Certificate Checker](https://dnschecker.space/ssl): Verify TLS handshake validity, certificate chain integrity, issuing CA, expiration countdown, and SAN host coverage.
+- [Security Headers Scanner](https://dnschecker.space/headers): Grade server defense posture against OWASP standards (HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy).
+- [IP & Domain Blacklist Check](https://dnschecker.space/blacklist): Query 50+ Real-time Blackhole Lists (DNSBL / RBL) including Spamhaus, AbuseIPDB, and Barracuda.
+- [Email Security & Deliverability](https://dnschecker.space/email): Audit MX records, SPF policy authorization, DKIM records, DMARC alignment, and disposable email detection.
+- [Port Scanner & Service Probe](https://dnschecker.space/ports): Probe common server ports (80, 443, 22, 21, 25, 3306, 25565) to verify firewall forwarding and reachability.
+- [IP Geolocation Tracker](https://dnschecker.space/geo): Map any IP address to city, region, country, postal code, and latitude/longitude coordinates.
+- [Hosting Provider Check](https://dnschecker.space/hosting): Discover datacenter host, upstream ISP, server environment, and ASN peering information.
+- [All Network Tools Arsenal](https://dnschecker.space/tools): Complete index of all 10+ free network diagnostic and cybersecurity lookups.
+
+## Knowledge Base & Engineering Guides
+
+- [DNS Propagation Guide](https://dnschecker.space/blog): Deep dive into DNS hierarchy, root/TLD servers, TTL caching delays, and flushing local DNS resolvers.
+- [Command Line IP Checking](https://dnschecker.space/blog): How to check public and private LAN IPs via Windows CMD (ipconfig, curl), PowerShell, and Unix bash.
+- [Malicious IP Detection](https://dnschecker.space/blog): Detecting botnets, brute-force scanners, spam traps, and interpreting DNSBL/RBL reports.
+- [SSL Certificate Errors & Fixes](https://dnschecker.space/blog): Diagnosing NET::ERR_CERT_COMMON_NAME_INVALID, intermediate chain breaks, and Let's Encrypt automation.
+- [Email Authentication (SPF, DKIM, DMARC)](https://dnschecker.space/blog): Setting up strict email deliverability to stop spoofing and prevent inbox spam filtering.
+- [Port Forwarding & Gaming Diagnosis](https://dnschecker.space/blog): Verifying Minecraft, RDP, SSH, and HTTP ports through CGNAT and home router firewalls.
+
+## Technical Specifications
+
+- **Pricing:** 100% Free, no registration or credit card required.
+- **Protocol Support:** IPv4, IPv6, DNS over UDP/TCP, TLS 1.2 / 1.3, HTTP/1.1, HTTP/2.
+- **Accuracy:** Live real-time public registry lookups (ICANN, Regional Internet Registries ARIN/RIPE/APNIC, Root Nameservers).
+- **Security:** Strict read-only diagnostic telemetry; never stores user passwords or private keys.
