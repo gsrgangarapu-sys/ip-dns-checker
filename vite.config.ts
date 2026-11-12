@@ -8,6 +8,19 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 const isVercel = !!process.env.VERCEL;
 
+// Fix for @tanstack/start-plugin-core which sets rolldownOptions instead of rollupOptions for Vite 7
+const fixTanstackStartRollupPlugin = {
+  name: "fix-tanstack-start-rollup-options",
+  configEnvironment(name: string, env: any) {
+    if (env.build?.rolldownOptions) {
+      env.build.rollupOptions = {
+        ...env.build.rollupOptions,
+        ...env.build.rolldownOptions,
+      };
+    }
+  },
+};
+
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
@@ -15,4 +28,7 @@ export default defineConfig({
     server: { entry: "server" },
   },
   nitro: isVercel ? { preset: "vercel" } : true,
+  vite: {
+    plugins: [fixTanstackStartRollupPlugin],
+  },
 });
