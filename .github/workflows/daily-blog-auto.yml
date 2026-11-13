@@ -6,15 +6,21 @@ on:
     - cron: '0 4 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   daily-blog-and-seo:
     name: Generate Blog, Ping Google & Notify Chat
     runs-on: ubuntu-latest
     env:
-      GOOGLE_CHAT_WEBHOOK_URL: ${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}
+      GOOGLE_CHAT_WEBHOOK_URL: "https://chat.googleapis.com/v1/spaces/AAQACHJ1rC8/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=1UnFa25iYnNkNqy6yjkmpppbUFxUT0Yf4FUmTX8uWi4"
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -24,6 +30,11 @@ jobs:
 
       - name: Install Dependencies
         run: npm ci
+
+      - name: Configure Git User
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Run Daily Auto-Blog & Google Chat Notification
         run: node scripts/seo-automation/daily-auto-blog.js

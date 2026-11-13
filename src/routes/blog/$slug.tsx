@@ -30,7 +30,7 @@ export const Route = createFileRoute("/blog/$slug")({
 
     const title = `${article.title} | DNSChecker`;
     const description = article.metaDescription || article.excerpt;
-    const url = `https://dnschecker.space/blog/${article.slug}`;
+    const url = `https://www.dnschecker.space/blog/${article.slug}`;
 
     return {
       meta: [
@@ -40,7 +40,7 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:description", content: description },
         { property: "og:url", content: url },
         { property: "og:type", content: "article" },
-        { property: "og:image", content: "https://dnschecker.space/og-home.png" },
+        { property: "og:image", content: "https://www.dnschecker.space/og-home.png" },
         { property: "article:published_time", content: article.date },
         { property: "article:modified_time", content: article.updatedDate },
         { property: "article:author", content: article.author.name },
@@ -106,10 +106,10 @@ export function BlogPostPage() {
     "@type": "TechArticle",
     "headline": article.title,
     "description": article.metaDescription || article.excerpt,
-    "url": `https://dnschecker.space/blog/${article.slug}`,
+    "url": `https://www.dnschecker.space/blog/${article.slug}`,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://dnschecker.space/blog/${article.slug}`
+      "@id": `https://www.dnschecker.space/blog/${article.slug}`
     },
     "author": {
       "@type": "Person",
@@ -119,10 +119,10 @@ export function BlogPostPage() {
     "publisher": {
       "@type": "Organization",
       "name": "DNSChecker",
-      "url": "https://dnschecker.space/",
+      "url": "https://www.dnschecker.space/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://dnschecker.space/favicon.svg"
+        "url": "https://www.dnschecker.space/favicon.svg"
       }
     },
     "datePublished": article.date,
@@ -135,12 +135,12 @@ export function BlogPostPage() {
   };
 
   const breadcrumbs = [
-    { name: "Home", url: "https://dnschecker.space/" },
-    { name: "Blog", url: "https://dnschecker.space/blog" },
-    { name: article.title, url: `https://dnschecker.space/blog/${article.slug}` }
+    { name: "Home", url: "https://www.dnschecker.space/" },
+    { name: "Blog", url: "https://www.dnschecker.space/blog" },
+    { name: article.title, url: `https://www.dnschecker.space/blog/${article.slug}` }
   ];
 
-  const shareUrl = `https://dnschecker.space/blog/${article.slug}`;
+  const shareUrl = `https://www.dnschecker.space/blog/${article.slug}`;
 
   const copyShareLink = () => {
     navigator.clipboard.writeText(shareUrl);
