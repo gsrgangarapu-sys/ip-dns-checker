@@ -1,0 +1,34 @@
+name: SEO CI & Build Validation
+
+on:
+  push:
+    branches: [ main, feat/*, "feat/**" ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    name: Build & Technical SEO Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Validate SEO Content & Schema
+        run: npm run seo:audit
+
+      - name: Build Application Bundle (TanStack Start + Nitro)
+        run: npm run build
+
+      - name: Ping IndexNow (Production Main Only)
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: npm run indexnow

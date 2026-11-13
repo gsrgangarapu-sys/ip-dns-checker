@@ -1,0 +1,33 @@
+name: Weekly SEO Health Audit
+
+on:
+  schedule:
+    # Run every Monday at 06:00 UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  seo-monitor:
+    name: Run Automated SEO Health Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Live Endpoint & Header Monitor
+        run: npm run seo:monitor
+
+      - name: Update Keyword Opportunity Index
+        run: npm run seo:research
+
+      - name: Run Content Quality & Schema Audit
+        run: npm run seo:audit

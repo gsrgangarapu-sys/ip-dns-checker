@@ -1,0 +1,92 @@
+{
+  "id": "how-to-flush-dns-cache-windows",
+  "slug": "how-to-flush-dns-cache-windows",
+  "title": "How To Flush Dns Cache Windows: Complete Step-by-Step Guide",
+  "subtitle": "Step-by-step diagnostic workflow for clearing stale local DNS resolver caches and resolving host connection issues across operating systems.",
+  "category": "CMD & Terminal",
+  "status": "draft",
+  "readTime": "6 min read",
+  "date": "November 2026",
+  "updatedDate": "2026-11-13",
+  "author": {
+    "name": "DNSChecker Telemetry Team",
+    "role": "Network Infrastructure Specialist"
+  },
+  "primaryKeyword": "how to flush dns cache windows",
+  "secondaryKeywords": [
+    "how to flush dns cache windows cmd",
+    "clear dns cache",
+    "ipconfig flushdns",
+    "restart dns client",
+    "fix dns resolution errors"
+  ],
+  "searchIntent": "Informational",
+  "tags": [
+    "DNS",
+    "Windows",
+    "CMD",
+    "Networking",
+    "Troubleshooting"
+  ],
+  "excerpt": "Learn how to flush your DNS cache on Windows 10 & 11, macOS, and Linux to force instant resolution of updated nameservers and fix connectivity errors.",
+  "metaDescription": "Learn how to flush dns cache windows. Step-by-step commands for Windows, macOS, and Linux to fix DNS cache errors, resolve IP changes, and restore web connectivity.",
+  "canonicalUrl": "https://dnschecker.space/blog/how-to-flush-dns-cache-windows",
+  "toolLink": "/dns",
+  "toolName": "Run Live DNS Lookup",
+  "tableOfContents": [
+    {
+      "id": "what-is-dns-cache",
+      "title": "What Is the Local DNS Cache?"
+    },
+    {
+      "id": "why-flush-cache",
+      "title": "Why and When to Flush Your DNS"
+    },
+    {
+      "id": "windows-cmd-flush",
+      "title": "How to Flush DNS in Windows (CMD & PowerShell)"
+    },
+    {
+      "id": "macos-linux-flush",
+      "title": "How to Flush DNS on macOS & Linux"
+    },
+    {
+      "id": "verify-resolution",
+      "title": "Verify DNS Resolution Online"
+    },
+    {
+      "id": "faq",
+      "title": "Frequently Asked Questions"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why should I run how to flush dns cache windows?",
+      "answer": "When a website updates its IP address or migrates to a new server, your operating system continues caching the outdated IP until the TTL expires. Flushing your DNS forces your system to fetch fresh records immediately."
+    },
+    {
+      "question": "Does flushing DNS delete my browser history or cookies?",
+      "answer": "No. Flushing the DNS cache only clears temporary IP mapping tables stored by the OS resolver. It does not touch browser bookmarks, passwords, or cookies."
+    },
+    {
+      "question": "Do I need administrator privileges to flush DNS?",
+      "answer": "On Windows, running CMD as administrator is recommended. On macOS and Linux, you must use sudo to restart mDNSResponder or systemd-resolved."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "What Is the Local DNS Cache?",
+      "content": "Every modern operating system maintains a temporary database known as the DNS resolver cache. When you visit a website, your computer saves the resolved IP address locally so it doesn't have to query external DNS resolvers on every single page load."
+    },
+    {
+      "heading": "Windows Command (Command Prompt & PowerShell)",
+      "command": "ipconfig /flushdns",
+      "content": "Open Command Prompt as Administrator and type the command above. You should receive the message: 'Successfully flushed the DNS Resolver Cache.'"
+    },
+    {
+      "heading": "macOS Terminal Command",
+      "command": "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder",
+      "content": "On macOS Sonoma, Ventura, and Monterey, execute this command in Terminal and enter your Mac administrator password when prompted."
+    }
+  ]
+}

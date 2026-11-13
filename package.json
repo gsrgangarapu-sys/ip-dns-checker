@@ -10,7 +10,13 @@
     "preview": "vite preview",
     "indexnow": "node scripts/indexnow.js",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "seo:research": "node scripts/seo-automation/keyword-research.js",
+    "seo:draft": "node scripts/seo-automation/generate-draft.js",
+    "seo:audit": "node scripts/seo-automation/content-audit.js",
+    "seo:publish": "node scripts/seo-automation/publish-article.js",
+    "seo:gsc": "node scripts/seo-automation/gsc-ga4-integration.js",
+    "seo:monitor": "node scripts/seo-monitor.js"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
