@@ -1,0 +1,35 @@
+name: Daily Blog Auto-Publisher & Google Rank Alert
+
+on:
+  schedule:
+    # Run daily at 04:00 UTC (09:30 AM IST)
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+jobs:
+  daily-blog-and-seo:
+    name: Generate Blog, Ping Google & Notify Chat
+    runs-on: ubuntu-latest
+    env:
+      GOOGLE_CHAT_WEBHOOK_URL: ${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Daily Auto-Blog & Google Chat Notification
+        run: node scripts/seo-automation/daily-auto-blog.js
+
+      - name: Submit URLs to IndexNow (Bing & Yandex)
+        run: npm run indexnow
+
+      - name: Run Endpoint Health Check
+        run: npm run seo:monitor

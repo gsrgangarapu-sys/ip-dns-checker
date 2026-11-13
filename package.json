@@ -16,7 +16,9 @@
     "seo:audit": "node scripts/seo-automation/content-audit.js",
     "seo:publish": "node scripts/seo-automation/publish-article.js",
     "seo:gsc": "node scripts/seo-automation/gsc-ga4-integration.js",
-    "seo:monitor": "node scripts/seo-monitor.js"
+    "seo:monitor": "node scripts/seo-monitor.js",
+    "seo:daily": "node scripts/seo-automation/daily-auto-blog.js",
+    "seo:notify": "node scripts/seo-automation/notify-chat.js"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
