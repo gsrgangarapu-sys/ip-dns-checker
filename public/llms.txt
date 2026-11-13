@@ -37,6 +37,10 @@
 - [What Is DNSSEC?](https://www.dnschecker.space/blog/what-is-dnssec-guide): Digital cryptographic signatures (RRSIG, DNSKEY, DS) preventing DNS cache poisoning.
 - [Minecraft Server IP Checker](https://www.dnschecker.space/blog/ip-checker-minecraft): Finding, testing, and protecting game servers with port 25565 and SRV records.
 - [WebRTC & VPN Leak Test](https://www.dnschecker.space/blog/webrtc-vpn-leak-test): Check if real public IP is exposed through WebRTC STUN requests while on VPN.
+- [How to Perform a WHOIS Domain Lookup](https://www.dnschecker.space/blog/how-to-perform-whois-lookup): Audit registrar records, expiry countdowns, EPP locks, and nameserver delegation.
+- [How to Track IP Geolocation](https://www.dnschecker.space/blog/how-to-track-ip-geolocation): Latitude, longitude, ASN routing, and ISP city accuracy explained.
+
+- [Public vs. Private IP Addresses: RFC 1918 Subnets & NAT Translation Guide](https://www.dnschecker.space/blog/public-vs-private-ip-ranges-rfc-1918): Understand how RFC 1918 private subnets protect LAN devices, how Network Address Translation (NAT) conserves IPv4 address space, and how to detect your router's true WAN IP.
 
 ## Technical Specifications
 
