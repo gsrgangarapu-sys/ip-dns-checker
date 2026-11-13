@@ -1,0 +1,28 @@
+name: Build & SEO checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Build (Vercel mode)
+        run: npm run build
+        env:
+          VERCEL: "1"
+      - name: Canonical host regression check
+        run: |
+          if grep -rn "https://dnschecker.space" src/components/Seo.tsx "src/routes/sitemap[.]xml.ts" "src/routes/robots[.]txt.ts" public/sitemap.xml public/robots.txt public/llms.txt public/llms-full.txt; then
+            echo "Non-www canonical URLs found - all canonical/sitemap URLs must use https://www.dnschecker.space"
+            exit 1
+          fi
+          echo "Canonical host check passed"

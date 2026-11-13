@@ -42,12 +42,12 @@ export const Route = createFileRoute("/my-ip")({
       { name: "description", content: "Find your public IPv4 and IPv6 address, ISP, city location, ASN, and network connection status in real-time. Free instant IP detector with zero logs." },
       { property: "og:title", content: "What Is My IP Address? Check Public & Local IP | DNSChecker" },
       { property: "og:description", content: "Find your public IPv4 and IPv6 address, ISP, city location, ASN, and network connection status in real-time. Free instant IP detector with zero logs." },
-      { property: "og:url", content: "https://dnschecker.space/my-ip" },
-      { property: "og:image", content: "https://dnschecker.space/og-myip.png" },
+      { property: "og:url", content: "https://www.dnschecker.space/my-ip" },
+      { property: "og:image", content: "https://www.dnschecker.space/og-myip.png" },
       { property: "og:type", content: "website" },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/my-ip" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/my-ip" }],
   }),
   component: MyIpPage,
 });
@@ -71,11 +71,11 @@ function MyIpPage() {
         title="What Is My IP Address? - Check Your IP &amp; Location" 
         description="Find out what your public and local IP address is. Instantly check PC LAN IP, geolocation, ISP, WebRTC leak status, and browser fingerprint with our free IP tracker." 
         keywords="what is my ip address, my ip checker, check ip, public ip address, pc local ip, webrtc leak test, ip location, ip tracker, my isp, free ip scanner, reverse ip lookup"
-        url="https://dnschecker.space/my-ip"
+        url="https://www.dnschecker.space/my-ip"
         faqs={myIpFaqs}
         breadcrumbs={[
-          { name: "Home", url: "https://dnschecker.space/" },
-          { name: "My IP Address", url: "https://dnschecker.space/my-ip" }
+          { name: "Home", url: "https://www.dnschecker.space/" },
+          { name: "My IP Address", url: "https://www.dnschecker.space/my-ip" }
         ]}
         toolName="IP Address Checker"
       />

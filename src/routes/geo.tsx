@@ -14,15 +14,15 @@ export const Route = createFileRoute("/geo")({
       { name: "description", content: "Map any IPv4 or IPv6 address or domain to country, region, city, postal code, and latitude/longitude coordinates on an interactive world map." },
       { property: "og:title", content: "IP Geolocation Lookup & Map Coordinate Tracker | DNSChecker" },
       { property: "og:description", content: "Map any IPv4 or IPv6 address or domain to country, region, city, postal code, and latitude/longitude coordinates on an interactive world map." },
-      { property: "og:url", content: "https://dnschecker.space/geo" },
-      { property: "og:image", content: "https://dnschecker.space/og-geo.png" },
+      { property: "og:url", content: "https://www.dnschecker.space/geo" },
+      { property: "og:image", content: "https://www.dnschecker.space/og-geo.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "IP Geolocation Lookup & Map Coordinate Tracker | DNSChecker" },
       { name: "twitter:description", content: "Map any IPv4 or IPv6 address or domain to country, region, city, postal code, and latitude/longitude coordinates on an interactive world map." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/geo" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/geo" }],
   }),
   component: GeoPage,
 });
@@ -67,10 +67,10 @@ function GeoPage() {
         title="IP Geolocation & Tracker — Map Any IP Address" 
         description="Track and map the exact geographical location of any IP or domain. Discover country, region, city, and GPS coordinates instantly." 
         keywords="ip geolocation, ip tracker, map ip address, locate ip, find ip location, track ip address, domain location, ip to country, ip to city"
-        url="https://dnschecker.space/geo"
+        url="https://www.dnschecker.space/geo"
         breadcrumbs={[
-          { name: "Home", url: "https://dnschecker.space/" },
-          { name: "Geolocation", url: "https://dnschecker.space/geo" }
+          { name: "Home", url: "https://www.dnschecker.space/" },
+          { name: "Geolocation", url: "https://www.dnschecker.space/geo" }
         ]}
         faqs={[
           { question: "How accurate is IP geolocation?", answer: "IP geolocation is typically accurate to the city level (80-90% accuracy) for broadband. Country-level accuracy exceeds 99%. Mobile and VPN connections may show the carrier gateway or VPN server location." },
@@ -82,7 +82,7 @@ function GeoPage() {
           "@context": "https://schema.org",
           "@type": "WebApplication",
           "name": "IP Geolocation Tracker",
-          "url": "https://dnschecker.space/geo",
+          "url": "https://www.dnschecker.space/geo",
           "description": "Track and map the geographical location of any IP or domain.",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "All"

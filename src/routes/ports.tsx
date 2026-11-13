@@ -15,15 +15,15 @@ export const Route = createFileRoute("/ports")({
       { name: "description", content: "Free online port scanner. Test common TCP ports (80, 443, 22, 21, 25, 3306, 25565) on any IP or domain to verify firewall rules and port forwarding." },
       { property: "og:title", content: "Port Scanner Online — Test Open Ports & Firewall | DNSChecker" },
       { property: "og:description", content: "Free online port scanner. Test common TCP ports (80, 443, 22, 21, 25, 3306, 25565) on any IP or domain to verify firewall rules and port forwarding." },
-      { property: "og:url", content: "https://dnschecker.space/ports" },
-      { property: "og:image", content: "https://dnschecker.space/og-ports.png" },
+      { property: "og:url", content: "https://www.dnschecker.space/ports" },
+      { property: "og:image", content: "https://www.dnschecker.space/og-ports.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Port Scanner Online — Test Open Ports & Firewall | DNSChecker" },
       { name: "twitter:description", content: "Free online port scanner. Test common TCP ports (80, 443, 22, 21, 25, 3306, 25565) on any IP or domain to verify firewall rules and port forwarding." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/ports" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/ports" }],
   }),
   component: PortsPage,
 });
@@ -76,10 +76,10 @@ function PortsPage() {
         title="Open Port Scanner — Test TCP/UDP Network Security" 
         description="Scan common network ports (21, 22, 80, 443, etc.) to check network security, firewalls, and exposed infrastructure. Fast and accurate TCP port scanner." 
         keywords="port scanner, open port check, test open ports, network port scanner, tcp port check, firewall test, exposed ports, nmap alternative online"
-        url="https://dnschecker.space/ports"
+        url="https://www.dnschecker.space/ports"
         breadcrumbs={[
-          { name: "Home", url: "https://dnschecker.space/" },
-          { name: "Port Scanner", url: "https://dnschecker.space/ports" }
+          { name: "Home", url: "https://www.dnschecker.space/" },
+          { name: "Port Scanner", url: "https://www.dnschecker.space/ports" }
         ]}
         faqs={[
           { question: "How do I check if a port is open on my server?", answer: "Enter your server IP or domain in the DNSChecker Port Scanner. It probes common service ports (80, 443, 22, 21, 25, 3306, 8080) and reports whether each port is open, closed, or filtered." },
@@ -91,7 +91,7 @@ function PortsPage() {
           "@context": "https://schema.org",
           "@type": "WebApplication",
           "name": "Open Port Scanner",
-          "url": "https://dnschecker.space/ports",
+          "url": "https://www.dnschecker.space/ports",
           "description": "Scan common ports to check network security and firewalls.",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "All"

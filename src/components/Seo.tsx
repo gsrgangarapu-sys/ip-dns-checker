@@ -31,7 +31,7 @@ interface SeoProps {
 export function Seo({
   title = "DNSChecker — Free IP Checker & Network Intelligence Tools",
   description = "Instantly check your public IPv4/IPv6, PC local network IP, geolocation, ISP, DNS, SSL, and security reputation with our free IP checker toolkit.",
-  url = "https://dnschecker.space",
+  url = "https://www.dnschecker.space",
   faqs,
   schema,
   breadcrumbs,
@@ -41,16 +41,16 @@ export function Seo({
   const webSiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://dnschecker.space/#website",
+    "@id": "https://www.dnschecker.space/#website",
     "name": "DNSChecker",
     "alternateName": ["DNS Checker", "IP Checker", "DNSChecker Space", "DNS Checker Online"],
-    "url": "https://dnschecker.space/",
+    "url": "https://www.dnschecker.space/",
     "description": "Free network intelligence, DNS lookup, IP geolocation, SSL validation, and threat detection toolkit.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://dnschecker.space/lookup?q={search_term_string}"
+        "urlTemplate": "https://www.dnschecker.space/lookup?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -60,12 +60,12 @@ export function Seo({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://dnschecker.space/#organization",
+    "@id": "https://www.dnschecker.space/#organization",
     "name": "DNSChecker",
-    "url": "https://dnschecker.space/",
+    "url": "https://www.dnschecker.space/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://dnschecker.space/favicon.svg",
+      "url": "https://www.dnschecker.space/favicon.svg",
       "width": "512",
       "height": "512"
     },

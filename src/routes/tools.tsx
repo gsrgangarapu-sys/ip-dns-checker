@@ -15,15 +15,15 @@ export const Route = createFileRoute("/tools")({
       { name: "description", content: "Explore 10+ free network diagnostic and cyber-intelligence tools in one console. Real-time IP, DNS, WHOIS, SSL, blacklist, port, and security scans." },
       { property: "og:title", content: "All Network Tools — IP, DNS, WHOIS, Ports & SSL | DNSChecker" },
       { property: "og:description", content: "Explore 10+ free network diagnostic and cyber-intelligence tools in one console. Real-time IP, DNS, WHOIS, SSL, blacklist, port, and security scans." },
-      { property: "og:url", content: "https://dnschecker.space/tools" },
-      { property: "og:image", content: "https://dnschecker.space/og-tools.png" },
+      { property: "og:url", content: "https://www.dnschecker.space/tools" },
+      { property: "og:image", content: "https://www.dnschecker.space/og-tools.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "All Network Tools — IP, DNS, WHOIS, Ports & SSL | DNSChecker" },
       { name: "twitter:description", content: "Explore 10+ free network diagnostic and cyber-intelligence tools in one console. Real-time IP, DNS, WHOIS, SSL, blacklist, port, and security scans." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/tools" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/tools" }],
   }),
   component: ToolsPage,
 });
@@ -48,10 +48,10 @@ function ToolsPage() {
         title="All Network Tools — WHOIS, DNS, Ports, SSL | DNSChecker" 
         description="Explore all available network intelligence and security tools. IP lookup, DNS resolver, Domain WHOIS, SSL checker, Port Scanner, and more."
         keywords="network tools directory, all ip tools, free network tools, dns tools, web security tools, domain tools list, online network utilities"
-        url="https://dnschecker.space/tools"
+        url="https://www.dnschecker.space/tools"
         breadcrumbs={[
-          { name: "Home", url: "https://dnschecker.space/" },
-          { name: "All Tools", url: "https://dnschecker.space/tools" }
+          { name: "Home", url: "https://www.dnschecker.space/" },
+          { name: "All Tools", url: "https://www.dnschecker.space/tools" }
         ]}
         faqs={[
           { question: "What network tools are available on DNSChecker?", answer: "DNSChecker offers ten free tools: IP Checker, DNS Lookup, Domain WHOIS, Hosting Check, SSL Checker, Security Headers Scan, Blacklist Check, Email Verification, Port Scanner, and IP Geolocation." },
@@ -62,7 +62,7 @@ function ToolsPage() {
           "@context": "https://schema.org",
           "@type": "WebApplication",
           "name": "Network Tools Directory",
-          "url": "https://dnschecker.space/tools",
+          "url": "https://www.dnschecker.space/tools",
           "description": "Explore all available network intelligence and security tools.",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "All"
