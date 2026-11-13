@@ -14,15 +14,15 @@ export const Route = createFileRoute("/dns")({
       { name: "description", content: "Free online DNS check tool. Resolve A, AAAA, MX, NS, TXT, CNAME, and SOA records. Verify global DNS propagation across authoritative nameservers." },
       { property: "og:title", content: "DNS Check & Global DNS Propagation Checker | DNSChecker" },
       { property: "og:description", content: "Free online DNS check tool. Resolve A, AAAA, MX, NS, TXT, CNAME, and SOA records. Verify global DNS propagation across authoritative nameservers." },
-      { property: "og:url", content: "https://dnschecker.space/dns" },
-      { property: "og:image", content: "https://dnschecker.space/og-dns.png" },
+      { property: "og:url", content: "https://www.dnschecker.space/dns" },
+      { property: "og:image", content: "https://www.dnschecker.space/og-dns.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "DNS Check & Global DNS Propagation Checker | DNSChecker" },
       { name: "twitter:description", content: "Free online DNS check tool. Resolve A, AAAA, MX, NS, TXT, CNAME, and SOA records. Verify global DNS propagation across authoritative nameservers." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/dns" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/dns" }],
   }),
   component: DnsPage,
 });
@@ -81,11 +81,11 @@ function DnsPage() {
         title="DNS Check &amp; Global DNS Propagation Checker" 
         description="Free online DNS check tool. Check global DNS records including A, AAAA, MX, NS, TXT, CNAME, SOA, and PTR reverse DNS. Test DNS propagation and verify server resolution." 
         keywords="dns check, dns checker, check dns propagation, dns lookup, mx record check, txt record lookup, global dns check, reverse dns ptr"
-        url="https://dnschecker.space/dns"
+        url="https://www.dnschecker.space/dns"
         toolName="DNS Lookup Tool"
         breadcrumbs={[
-          { name: "Home", url: "https://dnschecker.space/" },
-          { name: "DNS Lookup", url: "https://dnschecker.space/dns" }
+          { name: "Home", url: "https://www.dnschecker.space/" },
+          { name: "DNS Lookup", url: "https://www.dnschecker.space/dns" }
         ]}
         faqs={[
           { question: "How do I check DNS records for a domain?", answer: "Enter any domain name in the DNSChecker DNS Lookup tool and select a record type (A, AAAA, MX, NS, TXT, CNAME, SOA, or CAA). The tool queries authoritative DNS servers and displays live results including TTL values." },

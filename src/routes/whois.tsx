@@ -15,15 +15,15 @@ export const Route = createFileRoute("/whois")({
       { name: "description", content: "Free WHOIS lookup tool. Inspect domain registration date, registrar name, expiration countdown, nameservers, and ICANN status flags in real-time." },
       { property: "og:title", content: "WHOIS Domain Lookup & Registration Search | DNSChecker" },
       { property: "og:description", content: "Free WHOIS lookup tool. Inspect domain registration date, registrar name, expiration countdown, nameservers, and ICANN status flags in real-time." },
-      { property: "og:url", content: "https://dnschecker.space/whois" },
-      { property: "og:image", content: "https://dnschecker.space/og-whois.png" },
+      { property: "og:url", content: "https://www.dnschecker.space/whois" },
+      { property: "og:image", content: "https://www.dnschecker.space/og-whois.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "WHOIS Domain Lookup & Registration Search | DNSChecker" },
       { name: "twitter:description", content: "Free WHOIS lookup tool. Inspect domain registration date, registrar name, expiration countdown, nameservers, and ICANN status flags in real-time." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/whois" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/whois" }],
   }),
   component: WhoisPage,
 });
@@ -82,10 +82,10 @@ function WhoisPage() {
         title="WHOIS Domain Lookup & IP Search - Find Out Who Owns a Domain" 
         description="Use our WHOIS domain lookup tool to trace the ownership of a domain name or IP address. Find registration details, contact info, nameservers, and expiry dates." 
         keywords="whois, whois ip, whois domain owner, domain status checker, check domain expiry, find domain registration details, whois record, whois domain tool, check domain owner"
-        url="https://dnschecker.space/whois"
+        url="https://www.dnschecker.space/whois"
         breadcrumbs={[
-          { name: "Home", url: "https://dnschecker.space/" },
-          { name: "WHOIS Lookup", url: "https://dnschecker.space/whois" }
+          { name: "Home", url: "https://www.dnschecker.space/" },
+          { name: "WHOIS Lookup", url: "https://www.dnschecker.space/whois" }
         ]}
         faqs={[
           { question: "What is WHOIS and what information does it show?", answer: "WHOIS is a public internet protocol that queries registration databases to reveal who owns a domain name. It shows registrant info, registration date, expiration date, nameservers, registrar, and DNSSEC status." },
@@ -97,7 +97,7 @@ function WhoisPage() {
           "@context": "https://schema.org",
           "@type": "WebApplication",
           "name": "WHOIS Lookup Tool",
-          "url": "https://dnschecker.space/whois",
+          "url": "https://www.dnschecker.space/whois",
           "description": "Find domain and IP registration details instantly.",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "All"

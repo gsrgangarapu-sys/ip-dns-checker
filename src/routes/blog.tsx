@@ -18,8 +18,8 @@ export const Route = createFileRoute("/blog")({
       { name: "description", content: "Comprehensive tutorials on global DNS propagation, SSL certificates, terminal CMD IP lookups, email deliverability, and perimeter firewall diagnostics." },
       { property: "og:title", content: "DNS, IP & Network Security Knowledge Base | DNSChecker" },
       { property: "og:description", content: "Comprehensive tutorials on global DNS propagation, SSL certificates, terminal CMD IP lookups, email deliverability, and perimeter firewall diagnostics." },
-      { property: "og:url", content: "https://dnschecker.space/blog" },
-      { property: "og:image", content: "https://dnschecker.space/og-home.png" },
+      { property: "og:url", content: "https://www.dnschecker.space/blog" },
+      { property: "og:image", content: "https://www.dnschecker.space/og-home.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:type", content: "website" },
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/blog")({
       { name: "twitter:description", content: "Comprehensive tutorials on global DNS propagation, SSL certificates, terminal CMD IP lookups, email deliverability, and perimeter firewall diagnostics." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" }
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/blog" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/blog" }],
   }),
   component: BlogPage,
 });
@@ -1086,19 +1086,19 @@ export function BlogPage() {
     "author": {
       "@type": "Organization",
       "name": activeArticle.author,
-      "url": "https://dnschecker.space"
+      "url": "https://www.dnschecker.space"
     },
     "publisher": {
       "@type": "Organization",
       "name": "DNSChecker",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://dnschecker.space/favicon.ico"
+        "url": "https://www.dnschecker.space/favicon.ico"
       }
     },
     "datePublished": "2026-10-22",
     "dateModified": "2026-10-23",
-    "mainEntityOfPage": `https://dnschecker.space/blog#${activeArticle.id}`,
+    "mainEntityOfPage": `https://www.dnschecker.space/blog#${activeArticle.id}`,
     "keywords": activeArticle.tags.join(", ")
   };
 
@@ -1108,10 +1108,10 @@ export function BlogPage() {
         title="DNS, IP & SSL Intelligence Knowledge Base | DNSChecker Guides" 
         description="Comprehensive engineering tutorials on global DNS propagation, website to IP lookups, SSL certificate validation, malicious IP detection, and email security." 
         keywords="dns check, dns propagation checker, ssl checker, email checker, port checker online, ip geolocation, website security checker, ip checker cmd, reverse ip lookup, blacklist checker, whois lookup, hosting check, dns checker wifi, free ssl checker"
-        url="https://dnschecker.space/blog"
+        url="https://www.dnschecker.space/blog"
         breadcrumbs={[
-          { name: "Home", url: "https://dnschecker.space/" },
-          { name: "Knowledge Base", url: "https://dnschecker.space/blog" }
+          { name: "Home", url: "https://www.dnschecker.space/" },
+          { name: "Knowledge Base", url: "https://www.dnschecker.space/blog" }
         ]}
         schema={articleJsonLd}
       />

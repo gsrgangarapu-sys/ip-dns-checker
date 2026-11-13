@@ -15,15 +15,15 @@ export const Route = createFileRoute("/lookup")({
       { name: "description", content: "Lookup details about any IP address including location, ISP, hostname, proxy, and blacklist status. Instantly track the IP's city, country, latitude, and longitude." },
       { property: "og:title", content: "IP Address Lookup & Geolocation Tracker | DNSChecker" },
       { property: "og:description", content: "Instantly track the IP's city, country, latitude, and longitude data." },
-      { property: "og:url", content: "https://dnschecker.space/lookup" },
-      { property: "og:image", content: "https://dnschecker.space/og-lookup.png" },
+      { property: "og:url", content: "https://www.dnschecker.space/lookup" },
+      { property: "og:image", content: "https://www.dnschecker.space/og-lookup.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "IP Address Lookup & Geolocation Tracker | DNSChecker" },
       { name: "twitter:description", content: "Trace any IPv4 or IPv6 address or domain name. Instantly view country, city, ISP, ASN, datacenter host, and interactive map coordinates for free." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/lookup" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/lookup" }],
   }),
   component: LookupPage,
 });
@@ -60,10 +60,10 @@ function LookupPage() {
         title="IP Address Lookup - Trace, Track &amp; Locate an IP Instantly" 
         description="Lookup details about any IP address including location, ISP, hostname, proxy, and blacklist status. Instantly track the IP's city, country, latitude, and longitude." 
         keywords="ip address lookup, trace ip, track ip, locate ip, check ip location, ip geolocation tracker, ip location finder, free ip lookup, reverse ip lookup, opentracker"
-        url="https://dnschecker.space/lookup"
+        url="https://www.dnschecker.space/lookup"
         breadcrumbs={[
-          { name: "Home", url: "https://dnschecker.space/" },
-          { name: "IP Address Lookup", url: "https://dnschecker.space/lookup" }
+          { name: "Home", url: "https://www.dnschecker.space/" },
+          { name: "IP Address Lookup", url: "https://www.dnschecker.space/lookup" }
         ]}
         toolName="IP Address Lookup"
         faqs={[

@@ -15,15 +15,15 @@ export const Route = createFileRoute("/blacklist")({
       { name: "description", content: "Test any IP address or domain against 50+ DNSBL and RBL real-time anti-spam blacklists, Spamhaus, and AbuseIPDB to detect brute-force relays." },
       { property: "og:title", content: "IP Blacklist Check & Malware Threat Scanner | DNSChecker" },
       { property: "og:description", content: "Test any IP address or domain against 50+ DNSBL and RBL real-time anti-spam blacklists, Spamhaus, and AbuseIPDB to detect brute-force relays." },
-      { property: "og:url", content: "https://dnschecker.space/blacklist" },
-      { property: "og:image", content: "https://dnschecker.space/og-blacklist.png" },
+      { property: "og:url", content: "https://www.dnschecker.space/blacklist" },
+      { property: "og:image", content: "https://www.dnschecker.space/og-blacklist.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "IP Blacklist Check & Malware Threat Scanner | DNSChecker" },
       { name: "twitter:description", content: "Test any IP address or domain against 50+ DNSBL and RBL real-time anti-spam blacklists, Spamhaus, and AbuseIPDB to detect brute-force relays." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/blacklist" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/blacklist" }],
   }),
   component: BlacklistPage,
 });
@@ -76,11 +76,11 @@ function BlacklistPage() {
         title="IP Checker Malicious & Blacklist Check - Scan IP Reputation" 
         description="Check if an IP address or domain is blacklisted or malicious. Test IP reputation against 50+ DNSBL anti-spam databases, Spamhaus, Barracuda, and threat feeds." 
         keywords="ip checker malicious, ip checker blacklist, ip reputation check, check if ip is blacklisted, spamhaus lookup, mxtoolbox blacklist, dnsbl check, rbl check, email blacklist check"
-        url="https://dnschecker.space/blacklist"
+        url="https://www.dnschecker.space/blacklist"
         toolName="IP Blacklist Checker"
         breadcrumbs={[
-          { name: "Home", url: "https://dnschecker.space/" },
-          { name: "Blacklist Check", url: "https://dnschecker.space/blacklist" }
+          { name: "Home", url: "https://www.dnschecker.space/" },
+          { name: "Blacklist Check", url: "https://www.dnschecker.space/blacklist" }
         ]}
         faqs={[
           { question: "How do I check if my IP address is blacklisted?", answer: "Enter your IP address or domain in the DNSChecker Blacklist Check tool. It queries 50+ DNS-based Blackhole Lists (DNSBLs) including Spamhaus ZEN, Barracuda Central, SpamCop, and AbuseIPDB in real time." },
