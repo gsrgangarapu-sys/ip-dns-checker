@@ -25,10 +25,10 @@ export const Route = createFileRoute("/sitemap")({
       { name: "description", content: "Complete HTML directory of all free network tools, DNS propagation checkers, IP lookups, security scanners, and engineering tutorials on DNSChecker." },
       { property: "og:title", content: "HTML Sitemap | DNSChecker" },
       { property: "og:description", content: "Complete directory of network tools, DNS lookups, and technical tutorials." },
-      { property: "og:url", content: "https://dnschecker.space/sitemap" },
+      { property: "og:url", content: "https://www.dnschecker.space/sitemap" },
       { name: "robots", content: "index, follow" }
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/sitemap" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/sitemap" }],
   }),
   component: SitemapPage,
 });
@@ -54,10 +54,11 @@ function SitemapPage() {
       <Seo 
         title="HTML Sitemap | DNSChecker" 
         description="Navigate all network intelligence tools, security scanners, and engineering tutorials on DNSChecker." 
-        url="https://dnschecker.space/sitemap"
+        keywords="sitemap, html sitemap, dnschecker sitemap, site index"
+        url="https://www.dnschecker.space/sitemap"
         breadcrumbs={[
-          { name: "Home", url: "https://dnschecker.space/" },
-          { name: "Sitemap", url: "https://dnschecker.space/sitemap" }
+          { name: "Home", url: "https://www.dnschecker.space/" },
+          { name: "Sitemap", url: "https://www.dnschecker.space/sitemap" }
         ]}
       />
       <SiteHeader />

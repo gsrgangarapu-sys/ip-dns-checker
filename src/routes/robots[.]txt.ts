@@ -38,8 +38,8 @@ export const Route = createFileRoute("/robots.txt")({
           "User-agent: cohere-ai",
           "Allow: /",
           "",
-          "Sitemap: https://dnschecker.space/sitemap.xml",
-          "LLMs-Txt: https://dnschecker.space/llms.txt",
+          "Sitemap: https://www.dnschecker.space/sitemap.xml",
+          "LLMs-Txt: https://www.dnschecker.space/llms.txt",
         ].join("\n");
 
         return new Response(robotsTxt, {

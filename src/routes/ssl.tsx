@@ -15,15 +15,15 @@ export const Route = createFileRoute("/ssl")({
       { name: "description", content: "Free SSL checker tool. Validate TLS handshake, certificate validity, issuer CA, expiration date, and chain integrity across all major web browsers." },
       { property: "og:title", content: "SSL Checker — Verify SSL/TLS Certificate Online | DNSChecker" },
       { property: "og:description", content: "Free SSL checker tool. Validate TLS handshake, certificate validity, issuer CA, expiration date, and chain integrity across all major web browsers." },
-      { property: "og:url", content: "https://dnschecker.space/ssl" },
-      { property: "og:image", content: "https://dnschecker.space/og-ssl.png" },
+      { property: "og:url", content: "https://www.dnschecker.space/ssl" },
+      { property: "og:image", content: "https://www.dnschecker.space/og-ssl.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "SSL Checker — Verify SSL/TLS Certificate Online | DNSChecker" },
       { name: "twitter:description", content: "Free SSL checker tool. Validate TLS handshake, certificate validity, issuer CA, expiration date, and chain integrity across all major web browsers." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/ssl" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/ssl" }],
   }),
   component: SslPage,
 });
@@ -76,10 +76,10 @@ function SslPage() {
         title="SSL Checker - Check SSL Certificate & Verify Installation" 
         description="Use our fast SSL Checker to quickly diagnose problems with your SSL certificate installation. Verify certificate validity, issuer details, and expiration dates." 
         keywords="ssl checker, check ssl certificate, ssl decoder, free ssl checker, ssl certificate checker, ssl validation, check https security, ssl server test"
-        url="https://dnschecker.space/ssl"
+        url="https://www.dnschecker.space/ssl"
         breadcrumbs={[
-          { name: "Home", url: "https://dnschecker.space/" },
-          { name: "SSL Checker", url: "https://dnschecker.space/ssl" }
+          { name: "Home", url: "https://www.dnschecker.space/" },
+          { name: "SSL Checker", url: "https://www.dnschecker.space/ssl" }
         ]}
         faqs={[
           { question: "How do I check if a website has a valid SSL certificate?", answer: "Enter the domain in the DNSChecker SSL Checker. It performs a TLS handshake and displays certificate details including issuer, expiration, SANs, and intermediate CA chain validity." },
@@ -91,7 +91,7 @@ function SslPage() {
           "@context": "https://schema.org",
           "@type": "WebApplication",
           "name": "SSL Certificate Checker",
-          "url": "https://dnschecker.space/ssl",
+          "url": "https://www.dnschecker.space/ssl",
           "description": "Verify TLS/SSL certificate validity, issuers, and protocols.",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "All"

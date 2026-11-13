@@ -31,5 +31,5 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://dnschecker.space/sitemap.xml
-LLMs-Txt: https://dnschecker.space/llms.txt
+Sitemap: https://www.dnschecker.space/sitemap.xml
+LLMs-Txt: https://www.dnschecker.space/llms.txt

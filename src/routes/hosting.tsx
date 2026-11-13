@@ -14,15 +14,15 @@ export const Route = createFileRoute("/hosting")({
       { name: "description", content: "Find the hosting provider, ASN network, datacenter location, and server IP address of any website. Free real-time web hosting inspection utility." },
       { property: "og:title", content: "Website to IP & Hosting Provider Lookup Tool | DNSChecker" },
       { property: "og:description", content: "Find the hosting provider, ASN network, datacenter location, and server IP address of any website. Free real-time web hosting inspection utility." },
-      { property: "og:url", content: "https://dnschecker.space/hosting" },
-      { property: "og:image", content: "https://dnschecker.space/og-hosting.png" },
+      { property: "og:url", content: "https://www.dnschecker.space/hosting" },
+      { property: "og:image", content: "https://www.dnschecker.space/og-hosting.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Website to IP & Hosting Provider Lookup Tool | DNSChecker" },
       { name: "twitter:description", content: "Find the hosting provider, ASN network, datacenter location, and server IP address of any website. Free real-time web hosting inspection utility." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/hosting" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/hosting" }],
   }),
   component: HostingPage,
 });
@@ -67,11 +67,11 @@ function HostingPage() {
         title="Website to IP Checker &amp; Hosting Provider Lookup" 
         description="Free website to IP checker. Find the server IP address, web hosting company, datacenter location, and ASN of any website instantly." 
         keywords="website to ip, website ip checker, find website ip address, hosting checker, who hosts this website, website hosting lookup, server ip lookup, datacenter location"
-        url="https://dnschecker.space/hosting"
+        url="https://www.dnschecker.space/hosting"
         toolName="Hosting Provider Lookup"
         breadcrumbs={[
-          { name: "Home", url: "https://dnschecker.space/" },
-          { name: "Hosting Check", url: "https://dnschecker.space/hosting" }
+          { name: "Home", url: "https://www.dnschecker.space/" },
+          { name: "Hosting Check", url: "https://www.dnschecker.space/hosting" }
         ]}
         faqs={[
           { question: "How do I find what hosting a website uses?", answer: "Enter any domain in the DNSChecker Hosting Check tool. It resolves the domain to its server IP address, then queries IP databases to identify the hosting provider, datacenter location, and ASN." },

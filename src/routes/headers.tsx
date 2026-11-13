@@ -15,15 +15,15 @@ export const Route = createFileRoute("/headers")({
       { name: "description", content: "Inspect HTTP response headers. Audit HSTS, Content-Security-Policy (CSP), X-Frame-Options, and Referrer-Policy against OWASP cybersecurity baselines." },
       { property: "og:title", content: "HTTP Security Headers Scanner & OWASP Audit | DNSChecker" },
       { property: "og:description", content: "Inspect HTTP response headers. Audit HSTS, Content-Security-Policy (CSP), X-Frame-Options, and Referrer-Policy against OWASP cybersecurity baselines." },
-      { property: "og:url", content: "https://dnschecker.space/headers" },
-      { property: "og:image", content: "https://dnschecker.space/og-headers.png" },
+      { property: "og:url", content: "https://www.dnschecker.space/headers" },
+      { property: "og:image", content: "https://www.dnschecker.space/og-headers.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "HTTP Security Headers Scanner & OWASP Audit | DNSChecker" },
       { name: "twitter:description", content: "Inspect HTTP response headers. Audit HSTS, Content-Security-Policy (CSP), X-Frame-Options, and Referrer-Policy against OWASP cybersecurity baselines." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/headers" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/headers" }],
   }),
   component: HeadersPage,
 });
@@ -63,10 +63,10 @@ function HeadersPage() {
         title="HTTP Headers Inspector — See Your Request Headers | IP Guardian" 
         description="Inspect every HTTP header your browser sends to a server. Check User-Agent, Accept, language preferences, forwarded IP, and security indicators." 
         keywords="http headers inspector, view request headers, check http headers, my user agent, inspect headers, http request viewer, browser headers"
-        url="https://dnschecker.space/headers"
+        url="https://www.dnschecker.space/headers"
         breadcrumbs={[
-          { name: "Home", url: "https://dnschecker.space/" },
-          { name: "Security Headers", url: "https://dnschecker.space/headers" }
+          { name: "Home", url: "https://www.dnschecker.space/" },
+          { name: "Security Headers", url: "https://www.dnschecker.space/headers" }
         ]}
         faqs={[
           { question: "What are HTTP security headers?", answer: "HTTP security headers are server response headers that instruct browsers on how to handle content securely. Key headers include HSTS (forces HTTPS), CSP (prevents XSS), X-Frame-Options (prevents clickjacking), and X-Content-Type-Options (prevents MIME sniffing)." },
@@ -77,7 +77,7 @@ function HeadersPage() {
           "@context": "https://schema.org",
           "@type": "WebApplication",
           "name": "HTTP Headers Inspector",
-          "url": "https://dnschecker.space/headers",
+          "url": "https://www.dnschecker.space/headers",
           "description": "Inspect HTTP headers sent by your browser.",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "All"

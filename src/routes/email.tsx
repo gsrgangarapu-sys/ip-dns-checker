@@ -15,15 +15,15 @@ export const Route = createFileRoute("/email")({
       { name: "description", content: "Verify your domain's email infrastructure. Check mail exchange (MX) availability, sender policy framework (SPF), and DMARC configuration in real time." },
       { property: "og:title", content: "Email Security Checker — Test SPF, DKIM & DMARC | DNSChecker" },
       { property: "og:description", content: "Verify email domain security. Check MX records, validate SPF policy, verify DKIM, test DMARC alignment, and detect disposable temporary email addresses." },
-      { property: "og:url", content: "https://dnschecker.space/email" },
-      { property: "og:image", content: "https://dnschecker.space/og-email.png" },
+      { property: "og:url", content: "https://www.dnschecker.space/email" },
+      { property: "og:image", content: "https://www.dnschecker.space/og-email.png" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Email Security Checker — Test SPF, DKIM & DMARC | DNSChecker" },
       { name: "twitter:description", content: "Verify email domain security. Check MX records, validate SPF policy, verify DKIM, test DMARC alignment, and detect disposable temporary email addresses." },
       { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     ],
-    links: [{ rel: "canonical", href: "https://dnschecker.space/email" }],
+    links: [{ rel: "canonical", href: "https://www.dnschecker.space/email" }],
   }),
   component: EmailPage,
 });
@@ -76,12 +76,12 @@ function EmailPage() {
         title="Email Security Checker — Verify MX, SPF & DMARC" 
         description="Verify your domain's email infrastructure. Check mail exchange (MX) availability, sender policy framework (SPF), and DMARC configuration." 
         keywords="email security check, mx record check, check spf record, check dmarc record, email deliverability test, domain email setup, mail server test"
-        url="https://dnschecker.space/email"
+        url="https://www.dnschecker.space/email"
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",
           "name": "Email Security Checker",
-          "url": "https://dnschecker.space/email",
+          "url": "https://www.dnschecker.space/email",
           "description": "Verify MX, TXT, and DMARC records for domain email security.",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "All"
