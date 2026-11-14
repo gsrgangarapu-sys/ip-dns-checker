@@ -42,6 +42,8 @@
 
 - [Public vs. Private IP Addresses: RFC 1918 Subnets & NAT Translation Guide](https://www.dnschecker.space/blog/public-vs-private-ip-ranges-rfc-1918): Understand how RFC 1918 private subnets protect LAN devices, how Network Address Translation (NAT) conserves IPv4 address space, and how to detect your router's true WAN IP.
 
+- [How to Fix DNS_PROBE_FINISHED_NXDOMAIN in Chrome & Windows: 7 Proven Methods](https://www.dnschecker.space/blog/how-to-fix-dns-probe-finished-nxdomain): Step-by-step diagnostic guide to resolve DNS_PROBE_FINISHED_NXDOMAIN across Google Chrome, Windows 11, macOS, and Linux resolvers.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
