@@ -3,11 +3,13 @@
  * Submits all pages and new blog guides to Bing, Yandex, Seznam, and IndexNow endpoints.
  */
 
+import { fileURLToPath } from 'url';
+
 const key = "d9f4e2a1b7c84e3a9f0b1c2d3e4f5a6b";
 const host = "dnschecker.space";
 const keyLocation = `https://${host}/${key}.txt`;
 
-const urlList = [
+const defaultUrlList = [
   `https://${host}/`,
   `https://${host}/my-ip`,
   `https://${host}/lookup`,
@@ -42,12 +44,12 @@ const urlList = [
   `https://${host}/blog/webrtc-vpn-leak-test`
 ];
 
-async function submitIndexNow() {
+export async function submitIndexNow(urls = defaultUrlList) {
   const payload = {
     host,
     key,
     keyLocation,
-    urlList
+    urlList: urls
   };
 
   try {
@@ -57,10 +59,14 @@ async function submitIndexNow() {
       body: JSON.stringify(payload)
     });
     console.log(`IndexNow submission response status: ${res.status} (${res.statusText})`);
-    console.log(`Submitted ${urlList.length} URLs to IndexNow.`);
+    console.log(`Submitted ${urls.length} URLs to IndexNow.`);
+    return res.status;
   } catch (err) {
     console.error("IndexNow submission failed:", err.message);
+    return null;
   }
 }
 
-submitIndexNow();
+if (process.argv[1] && process.argv[1].endsWith("indexnow.js")) {
+  submitIndexNow();
+}

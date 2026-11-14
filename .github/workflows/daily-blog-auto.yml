@@ -39,6 +39,10 @@ jobs:
       - name: Run Daily Auto-Blog & Google Chat Notification
         run: node scripts/seo-automation/daily-auto-blog.js
 
+      - name: Push Committed Changes to Main
+        run: |
+          git push origin HEAD:main || echo "Changes already pushed or up-to-date"
+
       - name: Submit URLs to IndexNow (Bing & Yandex)
         run: npm run indexnow
 

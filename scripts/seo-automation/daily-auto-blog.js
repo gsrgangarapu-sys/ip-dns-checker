@@ -19,6 +19,7 @@ import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { sendGoogleChatNotification } from './notify-chat.js';
+import { submitIndexNow } from '../indexnow.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -280,10 +281,22 @@ export async function runDailyAutoBlog() {
   },`;
 
   // Inject into blogArticles.tsx before the closing bracket of ALL_ARTICLES
-  currentBlogSource = currentBlogSource.replace(
-    '];\n\n// Helper utilities',
-    `${articleEntry}\n];\n\n// Helper utilities`
-  );
+  const helperMarker = "export function getAllArticles";
+  const helperIdx = currentBlogSource.lastIndexOf(helperMarker);
+  if (helperIdx === -1) {
+    throw new Error("Could not find helper utilities marker in blogArticles.tsx");
+  }
+  const arrayEndIdx = currentBlogSource.lastIndexOf("];", helperIdx);
+  if (arrayEndIdx === -1) {
+    throw new Error("Could not find closing array marker `];` in blogArticles.tsx");
+  }
+
+  let before = currentBlogSource.slice(0, arrayEndIdx).trimEnd();
+  if (before.endsWith("}") && !before.endsWith("},")) {
+    before += ",";
+  }
+
+  currentBlogSource = before + "\n" + articleEntry + "\n" + currentBlogSource.slice(arrayEndIdx);
   fs.writeFileSync(blogFilePath, currentBlogSource, 'utf-8');
   console.log("✓ Appended new article to src/data/blogArticles.tsx");
 
@@ -311,7 +324,6 @@ export async function runDailyAutoBlog() {
 
   // Ping IndexNow
   try {
-    const { submitIndexNow } = await import('../indexnow.js');
     console.log("Submitting updated URLs to IndexNow...");
     await submitIndexNow([liveUrl, "https://www.dnschecker.space/blog", "https://www.dnschecker.space/sitemap.xml"]);
     console.log("✓ IndexNow ping complete.");
@@ -338,10 +350,10 @@ export async function runDailyAutoBlog() {
     console.log("\nStaging and pushing changes to GitHub main...");
     execSync('git add src/data/blogArticles.tsx public/sitemap.xml public/llms.txt', { stdio: 'inherit' });
     execSync(`git commit -m "feat(seo): auto-publish ${selected.pillar} article: ${selected.slug}"`, { stdio: 'inherit' });
-    execSync('git push origin main', { stdio: 'inherit' });
+    execSync('git push origin HEAD:main', { stdio: 'inherit' });
     console.log("✓ Successfully pushed to origin main!");
   } catch (err) {
-    console.log("Git push note:", err.message);
+    console.error("Git push step:", err.message);
   }
 
   console.log("\n==================================================");
