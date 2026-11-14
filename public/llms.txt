@@ -44,6 +44,8 @@
 
 - [How to Fix DNS_PROBE_FINISHED_NXDOMAIN in Chrome & Windows: 7 Proven Methods](https://www.dnschecker.space/blog/how-to-fix-dns-probe-finished-nxdomain): Step-by-step diagnostic guide to resolve DNS_PROBE_FINISHED_NXDOMAIN across Google Chrome, Windows 11, macOS, and Linux resolvers.
 
+- [WHOIS Privacy Protection vs. GDPR Redaction: What Domain Owners Must Know](https://www.dnschecker.space/blog/whois-privacy-protection-gdpr-redaction): Discover why personal registrant data is redacted from WHOIS queries under GDPR, how proxy services operate, and how to verify legitimate domain ownership.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
