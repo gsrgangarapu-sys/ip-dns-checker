@@ -46,6 +46,8 @@
 
 - [WHOIS Privacy Protection vs. GDPR Redaction: What Domain Owners Must Know](https://www.dnschecker.space/blog/whois-privacy-protection-gdpr-redaction): Discover why personal registrant data is redacted from WHOIS queries under GDPR, how proxy services operate, and how to verify legitimate domain ownership.
 
+- [How to Renew Let's Encrypt SSL Certificates with Certbot: Automated & Manual Guide](https://www.dnschecker.space/blog/how-to-renew-lets-encrypt-ssl-certbot): Master Certbot renewal hooks, verify automated systemd timers, avoid rate limits, and test certificate chain validity with our free SSL inspector.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
