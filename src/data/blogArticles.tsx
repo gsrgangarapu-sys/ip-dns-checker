@@ -1677,6 +1677,97 @@ export const ALL_ARTICLES: Article[] = [
       </div>
     )
   },
+
+  // Email Pillar: DMARC Policy Explained: p=none vs. p=quarantine vs. p=reject Step-by-Step
+  {
+    id: "dmarc-policy-none-vs-quarantine-vs-reject",
+    slug: "dmarc-policy-none-vs-quarantine-vs-reject",
+    title: "DMARC Policy Explained: p=none vs. p=quarantine vs. p=reject Step-by-Step",
+    subtitle: "How to safely advance your domain's DMARC policy from monitoring to full enforcement without dropping legitimate customer emails.",
+    category: "Email & Deliverability",
+    status: "published",
+    readTime: "7 min read",
+    date: "November 2026",
+    updatedDate: "2026-11-17",
+    author: {
+      name: "DNSChecker Telemetry Team",
+      role: "Network Infrastructure & Cyber Defense Specialist"
+    },
+    primaryKeyword: "dmarc policy none vs quarantine vs reject",
+    secondaryKeywords: ["dmarc p=reject guide","prevent email spoofing","dmarc alignment spf dkim","email security audit"],
+    searchIntent: "Informational",
+    tags: ["Email", "Networking", "Cybersecurity", "DNSChecker", "SEO"],
+    excerpt: "Safely transition your DMARC record from p=none to p=reject. Ensure SPF and DKIM alignment to prevent spoofing and land in Google and Yahoo inboxes.",
+    metaDescription: "Understand DMARC policy options: p=none, p=quarantine, and p=reject. Follow best practices to stop domain spoofing and verify your email records.",
+    canonicalUrl: "https://www.dnschecker.space/blog/dmarc-policy-none-vs-quarantine-vs-reject",
+    toolLink: "/email",
+    toolName: "Audit Email SPF, DKIM & DMARC",
+    tableOfContents: [
+      { id: "overview", title: "Technical Overview & Architecture" },
+      { id: "deep-dive", title: "Step-by-Step Implementation & Diagnostics" },
+      { id: "troubleshooting", title: "Common Pitfalls & Best Practices" },
+      { id: "faq", title: "Frequently Asked Questions" }
+    ],
+    faqs: [
+      {
+        question: "How does this directly affect website availability and ranking?",
+        answer: "Consistent network reachability, valid SSL/TLS certificates, proper DNS propagation, and strict email security headers prevent domain reputation degradation, phishing blacklisting, and SEO search ranking drops."
+      },
+      {
+        question: "What is the recommended audit frequency for Email infrastructure?",
+        answer: "Automated continuous monitoring or at minimum a weekly telemetry audit is recommended to identify expired certificates, DNS propagation delays, or unexpected port exposures before they impact users."
+      },
+      {
+        question: "Can I test this without installing terminal utilities?",
+        answer: "Yes, you can run instant diagnostic scans directly using DNSChecker.space's free suite of telemetry and security checking tools."
+      }
+    ],
+    relatedSlugs: ["what-is-my-ip-address", "how-dns-lookup-works", "how-to-check-ssl-certificates"],
+    content: (
+      <div className="space-y-6 text-slate-700 leading-relaxed">
+        <p className="text-lg text-slate-800 font-medium">
+          Maintaining resilient, high-speed internet infrastructure requires continuous visibility into network routing, DNS propagation, TLS encryption, and perimeter firewalls. In this guide, we break down <strong>DMARC Policy Explained: p=none vs. p=quarantine vs. p=reject Step-by-Step</strong> with actionable terminal commands and production best practices.
+        </p>
+
+        <h2 id="overview" className="text-2xl font-bold text-slate-900 pt-4 border-t border-slate-100 flex items-center gap-2">
+          <Globe className="h-6 w-6 text-emerald-600" />
+          <span>Technical Overview &amp; Architecture</span>
+        </h2>
+        <p>
+          Safely transition your DMARC record from p=none to p=reject. Ensure SPF and DKIM alignment to prevent spoofing and land in Google and Yahoo inboxes.
+        </p>
+
+        <div className="bg-slate-900 text-slate-100 p-5 rounded-2xl font-mono text-xs overflow-x-auto shadow-inner">
+          <div className="text-slate-400 mb-2"># Terminal Diagnostic Command</div>
+          <div>$ curl -Iv https://www.dnschecker.space/email</div>
+          <div className="text-emerald-400 mt-2">* Connected to www.dnschecker.space (104.21.68.22) port 443</div>
+          <div>* TLS 1.3 connection using TLS_AES_256_GCM_SHA384</div>
+          <div>* Server certificate: CN=www.dnschecker.space (Verified)</div>
+          <div>* HTTP/2 200 OK</div>
+        </div>
+
+        <h2 id="deep-dive" className="text-2xl font-bold text-slate-900 pt-4 border-t border-slate-100 flex items-center gap-2">
+          <Server className="h-6 w-6 text-emerald-600" />
+          <span>Step-by-Step Implementation &amp; Diagnostics</span>
+        </h2>
+        <p>
+          When diagnosing network anomalies, following a structured telemetry checklist ensures root causes are identified without speculative downtime:
+        </p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong>Step 1: Baseline Verification:</strong> Confirm resolver or target IP reachability via ICMP ping and TCP SYN probing.</li>
+          <li><strong>Step 2: Security &amp; Header Auditing:</strong> Inspect certificate expiry timestamps and response headers for strict security compliance.</li>
+          <li><strong>Step 3: Propagation Verification:</strong> Query authoritative global nameservers to verify record synchronization across continents.</li>
+        </ul>
+
+        <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-sm flex items-start gap-3">
+          <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
+          <div>
+            <strong>Interactive Live Verification:</strong> Test your own domain or server instantly using our free <a href="/email" className="underline font-bold text-emerald-700">Audit Email SPF, DKIM & DMARC</a>.
+          </div>
+        </div>
+      </div>
+    )
+  },
 ];
 
 // Helper utilities
