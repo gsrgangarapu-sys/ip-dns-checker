@@ -52,6 +52,8 @@
 
 - [DMARC Policy Explained: p=none vs. p=quarantine vs. p=reject Step-by-Step](https://www.dnschecker.space/blog/dmarc-policy-none-vs-quarantine-vs-reject): Safely transition your DMARC record from p=none to p=reject. Ensure SPF and DKIM alignment to prevent spoofing and land in Google and Yahoo inboxes.
 
+- [Top 20 Vulnerable Ports Hackers Scan: Firewalls, Risks & Mitigation Guide](https://www.dnschecker.space/blog/top-20-vulnerable-network-ports-hackers-scan): Discover which ports automated internet botnets scan first, the common exploits associated with SMB (445), RDP (3389), and SSH (22), and how to close them.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
