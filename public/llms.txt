@@ -54,6 +54,8 @@
 
 - [Top 20 Vulnerable Ports Hackers Scan: Firewalls, Risks & Mitigation Guide](https://www.dnschecker.space/blog/top-20-vulnerable-network-ports-hackers-scan): Discover which ports automated internet botnets scan first, the common exploits associated with SMB (445), RDP (3389), and SSH (22), and how to close them.
 
+- [Why Does IP Geolocation Show the Wrong City? ISP PoPs, CDNs & Mobile Routing](https://www.dnschecker.space/blog/why-ip-geolocation-shows-wrong-city): Understand the technical reasons why IP geolocation databases place your device miles away from your home, and how MaxMind and IP2Location update records.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
