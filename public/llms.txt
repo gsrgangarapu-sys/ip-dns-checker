@@ -56,6 +56,8 @@
 
 - [Why Does IP Geolocation Show the Wrong City? ISP PoPs, CDNs & Mobile Routing](https://www.dnschecker.space/blog/why-ip-geolocation-shows-wrong-city): Understand the technical reasons why IP geolocation databases place your device miles away from your home, and how MaxMind and IP2Location update records.
 
+- [Advanced Network Telemetry & Real-Time DNS Propagation Monitoring](https://www.dnschecker.space/blog/network-telemetry-best-practices-3496): Deep architecture breakdown of DNS resolver telemetry, TTL caching mechanisms, and automated validation for high-availability systems.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
