@@ -23,6 +23,7 @@ import { submitIndexNow } from '../indexnow.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const repoRoot = path.resolve(__dirname, '../../');
 
 const PILLAR_TOPICS = [
   {
@@ -135,6 +136,119 @@ const PILLAR_TOPICS = [
     readTime: "6 min read",
     excerpt: "Understand the technical reasons why IP geolocation databases place your device miles away from your home, and how MaxMind and IP2Location update records.",
     metaDescription: "Find out why your IP address shows the wrong city or state. Learn how ISP PoPs, VPN routing, and Anycast CDNs impact IP geolocation accuracy.",
+    pillar: "Geo"
+  },
+  // --- Cycle 2: Advanced Network Architecture ---
+  {
+    slug: "ipv4-vs-ipv6-transition-dual-stack-guide",
+    title: "IPv4 vs. IPv6 Transition: Dual-Stack Architecture, NAT64 & Enterprise Migration Guide",
+    subtitle: "Overcome IPv4 address exhaustion with practical dual-stack deployment models, SLAAC addressing, DHCPv6, and NAT64/DNS64 gateway translation.",
+    category: "Fundamentals",
+    primaryKeyword: "ipv4 vs ipv6 transition dual stack",
+    secondaryKeywords: ["nat64 dns64 explained", "slaac ipv6 configuration", "ipv4 address exhaustion solutions", "check my ipv6 support"],
+    toolLink: "/my-ip",
+    toolName: "Check Your IPv4 & IPv6 Address",
+    readTime: "8 min read",
+    excerpt: "A practical engineering guide to deploying dual-stack networks, configuring SLAAC vs DHCPv6, overcoming CGNAT limitations, and testing client IPv6 readiness.",
+    metaDescription: "Learn how to transition from IPv4 to IPv6 using dual-stack architectures and NAT64. Overcome IPv4 exhaustion and test your IPv4/IPv6 address online.",
+    pillar: "IP"
+  },
+  {
+    slug: "dns-anycast-routing-architecture-explained",
+    title: "DNS Anycast Routing Explained: How Global CDNs & Root Nameservers Eliminate Latency",
+    subtitle: "How BGP Anycast routes DNS queries to the nearest physical edge node, mitigating DDoS attacks and minimizing resolver round-trip times.",
+    category: "DNS & Domain",
+    primaryKeyword: "dns anycast routing explained",
+    secondaryKeywords: ["anycast vs unicast dns", "bgp anycast routing", "how root nameservers work", "low latency dns propagation"],
+    toolLink: "/dns",
+    toolName: "Check Domain DNS Propagation",
+    readTime: "8 min read",
+    excerpt: "Discover how Anycast BGP routing powers cloud DNS providers like Cloudflare and Google, preventing outages and achieving single-digit millisecond query times.",
+    metaDescription: "Understand DNS Anycast routing architecture. Learn how BGP Anycast accelerates DNS queries and distributes traffic globally to prevent DDoS downtime.",
+    pillar: "DNS"
+  },
+  {
+    slug: "domain-dropcatching-and-pendingdelete-status",
+    title: "Domain Lifecycle & Dropcatching: How PendingDelete, Redemption & Grace Periods Work",
+    subtitle: "A technical guide to ICANN domain expiration lifecycles, auto-renew grace periods, and how domain dropcatching bots capture expiring names.",
+    category: "Website & Hosting",
+    primaryKeyword: "domain pendingdelete status dropcatching",
+    secondaryKeywords: ["icann domain lifecycle", "domain redemption grace period", "dropcatching expiring domains", "whois domain status codes"],
+    toolLink: "/whois",
+    toolName: "Check Domain WHOIS Record",
+    readTime: "7 min read",
+    excerpt: "Master ICANN's domain expiration timeline from Auto-Renew Grace Period to Redemption and PendingDelete, and learn how to track expiring domains.",
+    metaDescription: "Comprehensive guide to ICANN domain lifecycle stages: Active, Grace Period, Redemption, and PendingDelete. Monitor domain status with our free WHOIS tool.",
+    pillar: "WHOIS"
+  },
+  {
+    slug: "tls-1-3-vs-tls-1-2-performance-cipher-security",
+    title: "TLS 1.3 vs. TLS 1.2: Handshake Latency, 0-RTT Resumption & Cipher Security",
+    subtitle: "How TLS 1.3 eliminates round trips, removes legacy vulnerable ciphers, and delivers faster, forward-secret HTTPS connections across the web.",
+    category: "SSL & TLS",
+    primaryKeyword: "tls 1.3 vs tls 1.2 performance",
+    secondaryKeywords: ["tls 1.3 0-rtt handshake", "chacha20 poly1305 vs aes", "forward secrecy tls", "ssl tls certificate check"],
+    toolLink: "/ssl",
+    toolName: "Check SSL Certificate Expiry",
+    readTime: "7 min read",
+    excerpt: "Explore the technical improvements in TLS 1.3: 1-RTT initial handshakes, 0-RTT session resumption, deprecated insecure ciphers, and HTTPS speed benchmarks.",
+    metaDescription: "Compare TLS 1.3 vs TLS 1.2 handshakes and cryptographic cipher suites. Discover how TLS 1.3 speeds up websites and test your SSL certificate status.",
+    pillar: "SSL"
+  },
+  {
+    slug: "cors-misconfiguration-security-guide",
+    title: "Cross-Origin Resource Sharing (CORS) Security: Exploits, Preflight & Headers",
+    subtitle: "How improper Access-Control-Allow-Origin headers expose internal APIs to cross-site data theft, and how to safely configure CORS in modern web apps.",
+    category: "Security & Blacklist",
+    primaryKeyword: "cors misconfiguration security guide",
+    secondaryKeywords: ["access-control-allow-origin exploit", "cors preflight options request", "prevent cors vulnerabilities", "security headers audit"],
+    toolLink: "/headers",
+    toolName: "Scan Website Security Headers",
+    readTime: "8 min read",
+    excerpt: "Learn how CORS misconfigurations allow malicious origins to exfiltrate authenticated sensitive data, and audit your HTTP response headers.",
+    metaDescription: "Prevent severe CORS vulnerabilities. Understand Access-Control-Allow-Origin, preflight OPTIONS requests, and verify your HTTP security headers.",
+    pillar: "Security Scan"
+  },
+  {
+    slug: "bimi-brand-indicators-message-identification-setup",
+    title: "How to Set Up BIMI with VMC: Display Your Brand Logo in Gmail & Apple Mail",
+    subtitle: "Step-by-step implementation of Brand Indicators for Message Identification (BIMI), Verified Mark Certificates (VMC), and SVG profile requirements.",
+    category: "Email & Deliverability",
+    primaryKeyword: "how to set up bimi with vmc",
+    secondaryKeywords: ["bimi dns record generator", "verified mark certificate cost", "display brand logo in gmail", "email dmarc enforcement bimi"],
+    toolLink: "/email",
+    toolName: "Audit Email SPF, DKIM & DMARC",
+    readTime: "7 min read",
+    excerpt: "Everything you need to configure BIMI DNS records, secure a Verified Mark Certificate (VMC), enforce DMARC p=reject, and build trust in subscriber inboxes.",
+    metaDescription: "Learn how to implement BIMI (Brand Indicators for Message Identification) to show your verified logo in Gmail and Apple Mail. Check your email security records.",
+    pillar: "Email"
+  },
+  {
+    slug: "how-to-secure-ssh-port-22-brute-force-protection",
+    title: "How to Secure SSH Port 22: Key-Based Auth, Non-Standard Ports & Fail2ban",
+    subtitle: "Defend Linux servers from automated SSH brute-force botnets using Ed25519 keys, disabled root logins, rate-limiting, and Fail2ban jail configurations.",
+    category: "Security & Blacklist",
+    primaryKeyword: "how to secure ssh port 22",
+    secondaryKeywords: ["disable ssh password authentication", "fail2ban ssh configuration", "change default ssh port", "open port security scanner"],
+    toolLink: "/ports",
+    toolName: "Scan Open Ports & Firewall",
+    readTime: "8 min read",
+    excerpt: "Hardening guidelines for SSH port 22 on Ubuntu/Debian/RHEL servers: Ed25519 keys, TCP wrappers, Fail2ban ban rules, and port reachability audits.",
+    metaDescription: "Step-by-step server hardening guide for SSH port 22. Disable passwords, configure Fail2ban, and scan your open ports to verify perimeter security.",
+    pillar: "Ports"
+  },
+  {
+    slug: "autonomous-system-numbers-asn-bgp-peering-guide",
+    title: "Autonomous System Numbers (ASN) & BGP Peering: How the Internet Routes Traffic",
+    subtitle: "Understand how ASNs identify network operators, how BGP routing exchanges prefixes across Internet Exchange Points (IXPs), and how IP geolocation maps ASN paths.",
+    category: "Fundamentals",
+    primaryKeyword: "autonomous system number asn bgp guide",
+    secondaryKeywords: ["what is an asn number", "bgp peering internet exchange", "lookup ip asn and isp", "how bgp routing works"],
+    toolLink: "/geo",
+    toolName: "Verify IP Geolocation Telemetry",
+    readTime: "8 min read",
+    excerpt: "Deep dive into Autonomous Systems (ASNs), BGP path selection, transit providers vs peering, and how to query IP ASN and carrier routing data.",
+    metaDescription: "Learn what Autonomous System Numbers (ASNs) are and how Border Gateway Protocol (BGP) routes global Internet traffic. Check your IP and ASN details.",
     pillar: "Geo"
   }
 ];
@@ -348,9 +462,9 @@ export async function runDailyAutoBlog() {
   // Git Commit & Push if in local repository
   try {
     console.log("\nStaging and pushing changes to GitHub main...");
-    execSync('git add src/data/blogArticles.tsx public/sitemap.xml public/llms.txt', { stdio: 'inherit' });
-    execSync(`git commit -m "feat(seo): auto-publish ${selected.pillar} article: ${selected.slug}"`, { stdio: 'inherit' });
-    execSync('git push origin HEAD:main', { stdio: 'inherit' });
+    execSync('git add src/data/blogArticles.tsx public/sitemap.xml public/llms.txt scripts/seo-automation/daily-auto-blog.js', { stdio: 'inherit', cwd: repoRoot });
+    execSync(`git commit -m "feat(seo): auto-publish ${selected.pillar} article: ${selected.slug}"`, { stdio: 'inherit', cwd: repoRoot });
+    execSync('git push origin HEAD:main', { stdio: 'inherit', cwd: repoRoot });
     console.log("✓ Successfully pushed to origin main!");
   } catch (err) {
     console.error("Git push step:", err.message);
