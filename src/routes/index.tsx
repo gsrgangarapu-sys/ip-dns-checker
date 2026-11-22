@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SeoHomeContent } from "@/components/SeoHomeContent";
+import { ALL_ARTICLES } from "@/data/blogArticles";
 import { 
   Globe, 
   Network, 
@@ -14,7 +15,10 @@ import {
   Mail, 
   Server, 
   MapPin,
-  ArrowRight
+  ArrowRight,
+  BookOpen,
+  Clock,
+  Sparkles
 } from "lucide-react";
 import { useRef } from "react";
 
@@ -77,11 +81,12 @@ const tools = [
 
 function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const recentArticles = ALL_ARTICLES.slice(0, 4);
 
   return (
     <div ref={containerRef} className="min-h-screen flex flex-col selection:bg-emerald-500/30 relative">
       <Seo 
-        title="IP Checker &amp; IP Address Lookup - Check Your Public IP Location" 
+        title="IP Checker & IP Address Lookup - Check Your Public IP Location" 
         description="Free IP Checker and IP Address Lookup tool. Instantly test your public IPv4/IPv6, PC local network IP, geolocation, ISP, blacklist status, and WebRTC leaks." 
         keywords="ip checker, my ip checker, ip address lookup, what is my ip, ip location, check public ip, ip tracker, ip checker cmd, ip checker malicious, ip checker minecraft, ip checker blacklist, reverse ip lookup, dns checker"
         url="https://www.dnschecker.space"
@@ -183,6 +188,65 @@ function HomePage() {
                   </p>
                 </Link>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LATEST ENGINEERING & NETWORK GUIDES (SEO Internal Linking Section) */}
+      <section className="py-16 relative z-10 border-t border-slate-200 bg-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+            <div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-3">
+                <Sparkles className="h-3.5 w-3.5" />
+                <span>Knowledge Base</span>
+              </div>
+              <h2 className="text-[28px] sm:text-[36px] font-[700] text-foreground tracking-tight">
+                Latest Network Engineering Guides
+              </h2>
+              <p className="text-[15px] text-secondary-foreground mt-1">
+                Authoritative tutorials, RFC architectural breakdowns, and troubleshooting workflows.
+              </p>
+            </div>
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-600 hover:text-emerald-700 transition"
+            >
+              <span>View all guides</span>
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {recentArticles.map((article) => (
+              <Link
+                key={article.slug}
+                to={`/blog/${article.slug}`}
+                className="group flex flex-col justify-between bg-card border border-slate-200 hover:border-emerald-300 rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-md"
+              >
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-[11px] font-mono font-bold uppercase px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      {article.category}
+                    </span>
+                    <span className="text-[11px] text-slate-400 flex items-center gap-1">
+                      <Clock className="h-3 w-3" />
+                      {article.readTime}
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-base text-foreground group-hover:text-emerald-600 transition-colors line-clamp-2 mb-2 leading-snug">
+                    {article.title}
+                  </h3>
+                  <p className="text-xs text-secondary-foreground line-clamp-3 leading-relaxed">
+                    {article.excerpt}
+                  </p>
+                </div>
+                <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-600">
+                  <span>Read Tutorial</span>
+                  <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
             ))}
           </div>
         </div>
