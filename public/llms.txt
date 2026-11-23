@@ -74,6 +74,8 @@
 
 - [DNS Anycast Routing Explained: How Global CDNs & Root Nameservers Eliminate Latency](https://www.dnschecker.space/blog/dns-anycast-routing-architecture-explained): Discover how Anycast BGP routing powers cloud DNS providers like Cloudflare and Google, preventing outages and achieving single-digit millisecond query times.
 
+- [Domain Lifecycle & Dropcatching: How PendingDelete, Redemption & Grace Periods Work](https://www.dnschecker.space/blog/domain-dropcatching-and-pendingdelete-status): Master ICANN's domain expiration timeline from Auto-Renew Grace Period to Redemption and PendingDelete, and learn how to track expiring domains.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
