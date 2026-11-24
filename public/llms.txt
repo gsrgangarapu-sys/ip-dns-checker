@@ -78,6 +78,8 @@
 
 - [TLS 1.3 vs. TLS 1.2: Handshake Latency, 0-RTT Resumption & Cipher Security](https://www.dnschecker.space/blog/tls-1-3-vs-tls-1-2-performance-cipher-security): Explore the technical improvements in TLS 1.3: 1-RTT initial handshakes, 0-RTT session resumption, deprecated insecure ciphers, and HTTPS speed benchmarks.
 
+- [Cross-Origin Resource Sharing (CORS) Security: Exploits, Preflight & Headers](https://www.dnschecker.space/blog/cors-misconfiguration-security-guide): Learn how CORS misconfigurations allow malicious origins to exfiltrate authenticated sensitive data, and audit your HTTP response headers.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
