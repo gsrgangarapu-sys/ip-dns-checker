@@ -80,6 +80,8 @@
 
 - [Cross-Origin Resource Sharing (CORS) Security: Exploits, Preflight & Headers](https://www.dnschecker.space/blog/cors-misconfiguration-security-guide): Learn how CORS misconfigurations allow malicious origins to exfiltrate authenticated sensitive data, and audit your HTTP response headers.
 
+- [How to Set Up BIMI with VMC: Display Your Brand Logo in Gmail & Apple Mail](https://www.dnschecker.space/blog/bimi-brand-indicators-message-identification-setup): Everything you need to configure BIMI DNS records, secure a Verified Mark Certificate (VMC), enforce DMARC p=reject, and build trust in subscriber inboxes.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
