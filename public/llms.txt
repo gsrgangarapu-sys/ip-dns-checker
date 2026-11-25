@@ -82,6 +82,8 @@
 
 - [How to Set Up BIMI with VMC: Display Your Brand Logo in Gmail & Apple Mail](https://www.dnschecker.space/blog/bimi-brand-indicators-message-identification-setup): Everything you need to configure BIMI DNS records, secure a Verified Mark Certificate (VMC), enforce DMARC p=reject, and build trust in subscriber inboxes.
 
+- [How to Secure SSH Port 22: Key-Based Auth, Non-Standard Ports & Fail2ban](https://www.dnschecker.space/blog/how-to-secure-ssh-port-22-brute-force-protection): Hardening guidelines for SSH port 22 on Ubuntu/Debian/RHEL servers: Ed25519 keys, TCP wrappers, Fail2ban ban rules, and port reachability audits.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.

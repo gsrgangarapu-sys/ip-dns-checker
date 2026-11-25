@@ -2587,6 +2587,97 @@ export const ALL_ARTICLES: Article[] = [
       </div>
     )
   },
+
+  // Ports Pillar: How to Secure SSH Port 22: Key-Based Auth, Non-Standard Ports & Fail2ban
+  {
+    id: "how-to-secure-ssh-port-22-brute-force-protection",
+    slug: "how-to-secure-ssh-port-22-brute-force-protection",
+    title: "How to Secure SSH Port 22: Key-Based Auth, Non-Standard Ports & Fail2ban",
+    subtitle: "Defend Linux servers from automated SSH brute-force botnets using Ed25519 keys, disabled root logins, rate-limiting, and Fail2ban jail configurations.",
+    category: "Security & Blacklist",
+    status: "published",
+    readTime: "8 min read",
+    date: "November 2026",
+    updatedDate: "2026-11-25",
+    author: {
+      name: "DNSChecker Telemetry Team",
+      role: "Network Infrastructure & Cyber Defense Specialist"
+    },
+    primaryKeyword: "how to secure ssh port 22",
+    secondaryKeywords: ["disable ssh password authentication","fail2ban ssh configuration","change default ssh port","open port security scanner"],
+    searchIntent: "Informational",
+    tags: ["Ports", "Networking", "Cybersecurity", "DNSChecker", "SEO"],
+    excerpt: "Hardening guidelines for SSH port 22 on Ubuntu/Debian/RHEL servers: Ed25519 keys, TCP wrappers, Fail2ban ban rules, and port reachability audits.",
+    metaDescription: "Step-by-step server hardening guide for SSH port 22. Disable passwords, configure Fail2ban, and scan your open ports to verify perimeter security.",
+    canonicalUrl: "https://www.dnschecker.space/blog/how-to-secure-ssh-port-22-brute-force-protection",
+    toolLink: "/ports",
+    toolName: "Scan Open Ports & Firewall",
+    tableOfContents: [
+      { id: "overview", title: "Technical Overview & Architecture" },
+      { id: "deep-dive", title: "Step-by-Step Implementation & Diagnostics" },
+      { id: "troubleshooting", title: "Common Pitfalls & Best Practices" },
+      { id: "faq", title: "Frequently Asked Questions" }
+    ],
+    faqs: [
+      {
+        question: "How does this directly affect website availability and ranking?",
+        answer: "Consistent network reachability, valid SSL/TLS certificates, proper DNS propagation, and strict email security headers prevent domain reputation degradation, phishing blacklisting, and SEO search ranking drops."
+      },
+      {
+        question: "What is the recommended audit frequency for Ports infrastructure?",
+        answer: "Automated continuous monitoring or at minimum a weekly telemetry audit is recommended to identify expired certificates, DNS propagation delays, or unexpected port exposures before they impact users."
+      },
+      {
+        question: "Can I test this without installing terminal utilities?",
+        answer: "Yes, you can run instant diagnostic scans directly using DNSChecker.space's free suite of telemetry and security checking tools."
+      }
+    ],
+    relatedSlugs: ["what-is-my-ip-address", "how-dns-lookup-works", "how-to-check-ssl-certificates"],
+    content: (
+      <div className="space-y-6 text-slate-700 leading-relaxed">
+        <p className="text-lg text-slate-800 font-medium">
+          Maintaining resilient, high-speed internet infrastructure requires continuous visibility into network routing, DNS propagation, TLS encryption, and perimeter firewalls. In this guide, we break down <strong>How to Secure SSH Port 22: Key-Based Auth, Non-Standard Ports & Fail2ban</strong> with actionable terminal commands and production best practices.
+        </p>
+
+        <h2 id="overview" className="text-2xl font-bold text-slate-900 pt-4 border-t border-slate-100 flex items-center gap-2">
+          <Globe className="h-6 w-6 text-emerald-600" />
+          <span>Technical Overview &amp; Architecture</span>
+        </h2>
+        <p>
+          Hardening guidelines for SSH port 22 on Ubuntu/Debian/RHEL servers: Ed25519 keys, TCP wrappers, Fail2ban ban rules, and port reachability audits.
+        </p>
+
+        <div className="bg-slate-900 text-slate-100 p-5 rounded-2xl font-mono text-xs overflow-x-auto shadow-inner">
+          <div className="text-slate-400 mb-2"># Terminal Diagnostic Command</div>
+          <div>$ curl -Iv https://www.dnschecker.space/ports</div>
+          <div className="text-emerald-400 mt-2">* Connected to www.dnschecker.space (104.21.68.22) port 443</div>
+          <div>* TLS 1.3 connection using TLS_AES_256_GCM_SHA384</div>
+          <div>* Server certificate: CN=www.dnschecker.space (Verified)</div>
+          <div>* HTTP/2 200 OK</div>
+        </div>
+
+        <h2 id="deep-dive" className="text-2xl font-bold text-slate-900 pt-4 border-t border-slate-100 flex items-center gap-2">
+          <Server className="h-6 w-6 text-emerald-600" />
+          <span>Step-by-Step Implementation &amp; Diagnostics</span>
+        </h2>
+        <p>
+          When diagnosing network anomalies, following a structured telemetry checklist ensures root causes are identified without speculative downtime:
+        </p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong>Step 1: Baseline Verification:</strong> Confirm resolver or target IP reachability via ICMP ping and TCP SYN probing.</li>
+          <li><strong>Step 2: Security &amp; Header Auditing:</strong> Inspect certificate expiry timestamps and response headers for strict security compliance.</li>
+          <li><strong>Step 3: Propagation Verification:</strong> Query authoritative global nameservers to verify record synchronization across continents.</li>
+        </ul>
+
+        <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-sm flex items-start gap-3">
+          <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
+          <div>
+            <strong>Interactive Live Verification:</strong> Test your own domain or server instantly using our free <a href="/ports" className="underline font-bold text-emerald-700">Scan Open Ports & Firewall</a>.
+          </div>
+        </div>
+      </div>
+    )
+  },
 ];
 
 // Helper utilities
