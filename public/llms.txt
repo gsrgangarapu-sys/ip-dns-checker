@@ -86,6 +86,8 @@
 
 - [Autonomous System Numbers (ASN) & BGP Peering: How the Internet Routes Traffic](https://www.dnschecker.space/blog/autonomous-system-numbers-asn-bgp-peering-guide): Deep dive into Autonomous Systems (ASNs), BGP path selection, transit providers vs peering, and how to query IP ASN and carrier routing data.
 
+- [CIDR Notation & Subnet Masking: How /24, /16 and /8 Networks Work](https://www.dnschecker.space/blog/cidr-notation-subnetting-calculator-guide): Master CIDR notation, subnet masks, and network boundaries. Learn how /24, /28, and /16 prefixes allocate host addresses in modern cloud networks.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
