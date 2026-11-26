@@ -84,6 +84,8 @@
 
 - [How to Secure SSH Port 22: Key-Based Auth, Non-Standard Ports & Fail2ban](https://www.dnschecker.space/blog/how-to-secure-ssh-port-22-brute-force-protection): Hardening guidelines for SSH port 22 on Ubuntu/Debian/RHEL servers: Ed25519 keys, TCP wrappers, Fail2ban ban rules, and port reachability audits.
 
+- [Autonomous System Numbers (ASN) & BGP Peering: How the Internet Routes Traffic](https://www.dnschecker.space/blog/autonomous-system-numbers-asn-bgp-peering-guide): Deep dive into Autonomous Systems (ASNs), BGP path selection, transit providers vs peering, and how to query IP ASN and carrier routing data.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
