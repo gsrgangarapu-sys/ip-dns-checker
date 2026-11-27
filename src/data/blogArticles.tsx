@@ -2854,6 +2854,94 @@ export const ALL_ARTICLES: Article[] = [
       </div>
     )
   },
+
+  // DNS Pillar: DNS over HTTPS (DoH) vs. DNS over TLS (DoT): Encrypted DNS Architecture
+  {
+    id: "dns-over-https-doh-vs-dns-over-tls-dot",
+    slug: "dns-over-https-doh-vs-dns-over-tls-dot",
+    title: "DNS over HTTPS (DoH) vs. DNS over TLS (DoT): Encrypted DNS Architecture",
+    subtitle: "A security and performance comparison between DoH (Port 443) and DoT (Port 853), ISP eavesdropping defenses, and browser integration.",
+    category: "DNS & Domain",
+    status: "published",
+    readTime: "7 min read",
+    date: "November 2026",
+    updatedDate: "2026-11-27",
+    author: {
+      name: "DNSChecker Telemetry Team",
+      role: "Network Infrastructure & Cyber Defense Specialist"
+    },
+    primaryKeyword: "dns over https vs dns over tls",
+    secondaryKeywords: ["doh vs dot comparison","encrypted dns port 443","quad9 cloudflare doh","dns privacy leaks"],
+    searchIntent: "Informational",
+    tags: ["DNS", "Networking", "Cybersecurity", "DNSChecker", "SEO"],
+    excerpt: "Examine how DNS over HTTPS and DNS over TLS protect queries from ISP sniffing and public Wi-Fi eavesdropping, with setup guides for operating systems.",
+    metaDescription: "Compare DNS over HTTPS (DoH) vs DNS over TLS (DoT). Understand encryption protocols, port allocations, and test DNS propagation online.",
+    canonicalUrl: "https://www.dnschecker.space/blog/dns-over-https-doh-vs-dns-over-tls-dot",
+    toolLink: "/dns",
+    toolName: "Check DNS Propagation & Resolvers",
+    tableOfContents: [
+      { id: "overview", title: "Technical Overview & Architecture" },
+      { id: "deep-dive", title: "Step-by-Step Implementation & Diagnostics" },
+      { id: "troubleshooting", title: "Common Pitfalls & Best Practices" },
+      { id: "faq", title: "Frequently Asked Questions" }
+    ],
+    faqs: [
+      {
+        question: "How does this directly affect website availability and ranking?",
+        answer: "Consistent network reachability, valid SSL/TLS certificates, proper DNS propagation, and strict email security headers prevent domain reputation degradation, phishing blacklisting, and SEO search ranking drops."
+      },
+      {
+        question: "What is the recommended audit frequency for DNS infrastructure?",
+        answer: "Automated continuous monitoring or at minimum a weekly telemetry audit is recommended to identify expired certificates, DNS propagation delays, or unexpected port exposures before they impact users."
+      },
+      {
+        question: "Can I test this without installing terminal utilities?",
+        answer: "Yes, you can run instant diagnostic scans directly using DNSChecker.space's free suite of telemetry and security checking tools."
+      }
+    ],
+    relatedSlugs: ["what-is-my-ip-address", "how-dns-lookup-works", "how-to-check-ssl-certificates"],
+    content: (
+      <div className="space-y-6 text-slate-700 leading-relaxed">
+        <p className="text-lg text-slate-800 font-medium">
+          Maintaining resilient, high-speed internet infrastructure requires continuous visibility into network routing, DNS propagation, TLS encryption, and perimeter firewalls. In this guide, we break down <strong>DNS over HTTPS (DoH) vs. DNS over TLS (DoT): Encrypted DNS Architecture</strong> with actionable terminal commands and production best practices.
+        </p>
+
+        <h2 id="overview" className="text-2xl font-bold text-slate-900 pt-4 border-t border-slate-100 flex items-center gap-2">
+          <Globe className="h-6 w-6 text-emerald-600" />
+          <span>Technical Overview &amp; Architecture</span>
+        </h2>
+        <p>
+          Examine how DNS over HTTPS and DNS over TLS protect queries from ISP sniffing and public Wi-Fi eavesdropping, with setup guides for operating systems.
+        </p>
+
+        <div className="bg-slate-900 text-slate-100 p-5 rounded-2xl font-mono text-xs overflow-x-auto shadow-inner">
+          <div className="text-slate-400 mb-2"># Terminal Diagnostic Command</div>
+          <div>$ dig +trace +nodnssec www.dnschecker.space ANY</div>
+          <div className="text-emerald-400 mt-2 font-mono whitespace-pre">{"; <<>> DiG 9.18.28 <<>> +trace www.dnschecker.space\n;; Received 525 bytes from 198.41.0.4#53(a.root-servers.net)\n;; Received 680 bytes from 192.5.6.30#53(a.gtld-servers.net)\nwww.dnschecker.space.    300 IN  A   104.21.68.22\nwww.dnschecker.space.    300 IN  A   172.67.182.161"}</div>
+        </div>
+
+        <h2 id="deep-dive" className="text-2xl font-bold text-slate-900 pt-4 border-t border-slate-100 flex items-center gap-2">
+          <Server className="h-6 w-6 text-emerald-600" />
+          <span>Step-by-Step Implementation &amp; Diagnostics</span>
+        </h2>
+        <p>
+          When diagnosing network anomalies, following a structured telemetry checklist ensures root causes are identified without speculative downtime:
+        </p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong>Step 1: Baseline Verification:</strong> Confirm resolver or target IP reachability via ICMP ping and TCP SYN probing.</li>
+          <li><strong>Step 2: Security &amp; Header Auditing:</strong> Inspect certificate expiry timestamps and response headers for strict security compliance.</li>
+          <li><strong>Step 3: Propagation Verification:</strong> Query authoritative global nameservers to verify record synchronization across continents.</li>
+        </ul>
+
+        <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-sm flex items-start gap-3">
+          <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
+          <div>
+            <strong>Interactive Live Verification:</strong> Test your own domain or server instantly using our free <a href="/dns" className="underline font-bold text-emerald-700">Check DNS Propagation & Resolvers</a>.
+          </div>
+        </div>
+      </div>
+    )
+  },
 ];
 
 // Helper utilities

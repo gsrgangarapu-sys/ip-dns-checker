@@ -88,6 +88,8 @@
 
 - [CIDR Notation & Subnet Masking: How /24, /16 and /8 Networks Work](https://www.dnschecker.space/blog/cidr-notation-subnetting-calculator-guide): Master CIDR notation, subnet masks, and network boundaries. Learn how /24, /28, and /16 prefixes allocate host addresses in modern cloud networks.
 
+- [DNS over HTTPS (DoH) vs. DNS over TLS (DoT): Encrypted DNS Architecture](https://www.dnschecker.space/blog/dns-over-https-doh-vs-dns-over-tls-dot): Examine how DNS over HTTPS and DNS over TLS protect queries from ISP sniffing and public Wi-Fi eavesdropping, with setup guides for operating systems.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
