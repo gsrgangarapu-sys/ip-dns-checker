@@ -92,6 +92,8 @@
 
 - [RDAP vs. WHOIS: Why ICANN is Replacing Port 43 with JSON RESTful Queries](https://www.dnschecker.space/blog/rdap-vs-whois-protocol-migration): Learn why ICANN is deprecating text-based WHOIS on port 43 in favor of RDAP, featuring standardized JSON structures and authenticated registry queries.
 
+- [Mutual TLS (mTLS) Explained: Two-Way Authentication in Zero-Trust Systems](https://www.dnschecker.space/blog/mutual-tls-mtls-zero-trust-architecture): Understand how mTLS requires both client and server certificates during the TLS handshake, eliminating shared secrets and securing service meshes.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
