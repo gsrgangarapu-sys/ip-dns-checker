@@ -94,6 +94,8 @@
 
 - [Mutual TLS (mTLS) Explained: Two-Way Authentication in Zero-Trust Systems](https://www.dnschecker.space/blog/mutual-tls-mtls-zero-trust-architecture): Understand how mTLS requires both client and server certificates during the TLS handshake, eliminating shared secrets and securing service meshes.
 
+- [X-Frame-Options vs. CSP frame-ancestors: Complete Clickjacking Defense Guide](https://www.dnschecker.space/blog/x-frame-options-clickjacking-defense): Protect your users from clickjacking and UI redress attacks by configuring X-Frame-Options and Content Security Policy frame-ancestors headers properly.
+
 ## Technical Specifications
 
 - **Pricing:** 100% Free, no registration or credit card required.
